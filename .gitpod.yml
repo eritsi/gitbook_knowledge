@@ -4,7 +4,7 @@ tasks:
     init: | 
       nvm install v13.14.0
       # nvm install v12.18.2 # nvm ls-remote
-      npm install -g gitbook-cli@v2.6.9
+      npm install -g gitbook-cli
       # npm install gulp
       # npm install browser-sync
       # npm install del
