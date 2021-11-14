@@ -2,15 +2,16 @@
 tasks:
   - name: Install gitbook
     init: | 
-      nvm install v12.18.2
+      nvm install v13.14.0
+      # nvm install v12.18.2 # nvm ls-remote
       npm install -g gitbook-cli
-      npm install gulp
-      npm install browser-sync
-      npm install del
-      mkdir docs
-      cd docs
+      # npm install gulp
+      # npm install browser-sync
+      # npm install del
+      # mkdir docs
+      # cd docs
       gitbook init
-      gulp
+      # gulp
       gitbook serve
     command: echo 'Ready to start'
 
