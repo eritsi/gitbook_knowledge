@@ -20,12 +20,11 @@ tasks:
       gitbook install -g sunlight-highlighter
       gitbook install -g copy-code-button
       gitbook install -g anchors
-      gitbook install -g theme-official
-      gitbook install -g theme-mobdoc
-      gitbook install -g ztbcms-docs
-      gitbook install -g theme-open-docs
-      gitbook install -g theme-busbud
-      gitbook install -g ysp-zhuti
+      # gitbook install -g theme-official
+      # gitbook install -g theme-open-docs
+      # gitbook install -g theme-busbud
+      gitbook install -g codeblock-label
+      gitbook install -g search-pro-kui
       gitbook init
       # gulp
       gitbook serve
