@@ -17,14 +17,15 @@ tasks:
       gitbook install -g tabs2
       gitbook install -g url-embed # https://www.npmjs.com/package/gitbook-plugin-url-embed
       gitbook install -g hide-published-with
-      gitbook install -g sunlight-highlighter
-      gitbook install -g copy-code-button
+      # gitbook install -g sunlight-highlighter
+      # gitbook install -g copy-code-button
       gitbook install -g anchors
       # gitbook install -g theme-official
       # gitbook install -g theme-open-docs
       # gitbook install -g theme-busbud
       gitbook install -g codeblock-label
       gitbook install -g search-pro-kui
+      gitbook install -g code
       gitbook init
       # gulp
       gitbook serve
