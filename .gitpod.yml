@@ -4,7 +4,7 @@ tasks:
     init: | 
       # nvm install v13.14.0
       # nvm install v12.18.2
-      nvm install v8.8
+      nvm install v8.8 # gulpとコンパチブルなバージョン
       # nvm install v7.2 # nvm ls-remote
       npm install -g gitbook-cli
       npm install -g gulp@3.9.1
@@ -12,9 +12,7 @@ tasks:
       npm install del
       # mkdir docs
       # cd docs
-      # npm install gitbook-plugin-advanced-emoji
-      # npm install gitbook-plugin-hints
-      # npm install gitbook-plugin-tabs2
+      # npm install -g advanced-emoji
       gitbook install -g hints     # https://www.npmjs.com/package/gitbook-plugin-hints
       gitbook install -g tabs2
       gitbook install -g url-embed # https://www.npmjs.com/package/gitbook-plugin-url-embed
