@@ -1,3 +1,13 @@
 {
-    "plugins": ["hints", "tabs2", "url-embed"]
+    "title": "GitBook Tutorial",
+    "description": "This is a gitbook example",
+    "plugins": [
+        "hints", 
+        "tabs2", 
+        "url-embed", 
+        "-sharing",
+        "sunlight-highlighter", "-highlight",
+        "copy-code-button",
+        "hide-published-with"
+    ]
 }

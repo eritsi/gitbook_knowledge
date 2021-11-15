@@ -20,9 +20,17 @@ https://flutter.dev/assets/videos/FastDev.mp4
 github上では反映されません。\
 `hint ~ endhint`で囲みます。success, infoで種類を切り替えます。
 
-{% hint style="success" %}
+{% hint style="working" %}
 #### work
-hogehoge
+hogehoge - working
+{% endhint %}
+
+{% hint style="danger" %}
+hogehoge - danger
+{% endhint %}
+
+{% hint style="tip" %}
+hogehoge - tip
 {% endhint %}
 
 {% hint style="info" %}
@@ -30,9 +38,9 @@ hogehoge
 {% endhint %}
 
 ## コードの埋め込み方です
-codeブロックで囲みます。codeブロック無しでも動きますが、次項と形式を揃えた書き方になります。
-{% code title="timeline/timeline_view.dart " %}
-```diff
+codeブロックで囲みます。codeブロック無しでも動きますが、次項と形式を揃えた書き方になります。  
+
+```
   // Todo
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +51,6 @@ codeブロックで囲みます。codeブロック無しでも動きますが、
     );
   }
 ```
-{% endcode %}
 
 ## コードをタブ形式で埋め込みます
 tabsブロックでtabブロックを囲み、その中にcodeブロックを置きます。
