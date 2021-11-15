@@ -12,7 +12,9 @@ GitBookを試すためのリポジトリ
 [TOYOTAがFlutterを導入](https://techplay.jp/column/1516)して少し話題になっていました。
 
 動画はこちら\
-{% embed url="https://flutter.dev/assets/videos/FastDev.mp4" %}
+{% urlembed %}
+https://flutter.dev/assets/videos/FastDev.mp4
+{% endurlembed %}
 
 ## ヒント、ワーニングボックスの出し方です
 github上では反映されません。\
