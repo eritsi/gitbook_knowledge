@@ -8,6 +8,8 @@
         "-sharing",
         "sunlight-highlighter", "-highlight",
         "copy-code-button",
-        "hide-published-with"
+        "hide-published-with",
+        "anchors",
+        "theme-official"
     ]
 }

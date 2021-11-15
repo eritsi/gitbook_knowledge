@@ -21,7 +21,8 @@ tasks:
       gitbook install -g hide-published-with
       gitbook install -g sunlight-highlighter
       gitbook install -g copy-code-button
-
+      gitbook install -g anchors
+      gitbook install -g theme-official
       gitbook init
       # gulp
       gitbook serve
