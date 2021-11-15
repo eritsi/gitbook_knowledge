@@ -14,9 +14,9 @@ tasks:
       # cd docs
       gitbook install -g advanced-emoji
       gitbook install -g hints     # https://www.npmjs.com/package/gitbook-plugin-hints
-      gitbook install -g todo
-      gitbook install -g graph
-      gitbook install -g mathjax
+      # gitbook install -g todo  Error: Missing required argument #1 if (args[ii] == null) throw missingRequiredArg(ii)
+      # gitbook install -g graph
+      # gitbook install -g mathjax
       gitbook install -g tabs2
       gitbook install -g url-embed # https://www.npmjs.com/package/gitbook-plugin-url-embed
       gitbook install -g hide-published-with
