@@ -25,20 +25,20 @@ github上では反映されません。
 hogehoge - working
 {% endhint %}
 
-{% hint style="danger" %}
-hogehoge - danger
+{% hint style="danger" %}  
+hogehoge - danger  
 {% endhint %}
 
-{% hint style="tip" %}
-hogehoge - tip
+{% hint style="tip" %}  
+hogehoge - tip  
 {% endhint %}
 
-{% hint style="info" %}
-この中は普通にMarkdownで記載
+{% hint style="info" %}  
+この中は普通にMarkdownで記載  
 {% endhint %}
 
 ## コードの埋め込み方です
-codeブロックで囲みます。codeブロック無しでも動きますが、次項と形式を揃えた書き方になります。  
+codeブロックで囲みます。  
 
 ```
   // Todo
@@ -56,7 +56,6 @@ codeブロックで囲みます。codeブロック無しでも動きますが、
 tabsブロックでtabブロックを囲み、その中にcodeブロックを置きます。
 {% tabs %}
 {% tab title="viewmodel" %}
-{% code title="timeline/timeline_viewmodel.dart" %}
 ```dart
 final postsProvider = StateProvider(
   (ref) => [
@@ -70,11 +69,9 @@ final postsProvider = StateProvider(
   ],
 );
 ```
-{% endcode %}
 {% endtab %}
 
 {% tab title="view" %}
-{% code title="timeline/timeline_view.dart" %}
 ```dart
   // bodyの要素
   Widget _timeLine(BuildContext context) {
@@ -82,6 +79,5 @@ final postsProvider = StateProvider(
     return _timeLineCards(context, posts.state); // 変数.state で値にアクセスできる
   }
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
