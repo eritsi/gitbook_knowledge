@@ -14,7 +14,7 @@ tasks:
       # cd docs
       npm install gitbook-plugin-advanced-emoji
       npm install gitbook-plugin-hints
-      npm install gitbook-plugin-tabs2
+      # npm install gitbook-plugin-tabs2
       gitbook init
       # gulp
       gitbook serve
