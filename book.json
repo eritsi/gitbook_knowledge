@@ -1,5 +1,4 @@
 {
     "plugins": ["gitbook-plugin-advanced-emoji"],
-    "plugins": ["gitbook-plugin-hints"],
-    "plugins": ["gitbook-plugin-tabs2"]
+    "plugins": ["gitbook-plugin-hints"]
 }
