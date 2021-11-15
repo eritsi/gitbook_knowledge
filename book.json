@@ -2,7 +2,11 @@
     "title": "GitBook Tutorial",
     "description": "This is a gitbook example",
     "plugins": [
-        "hints", 
+        "hints",
+        "advanced-emoji",
+        "todo",
+        "graph",
+        "mathjax",
         "tabs2", 
         "url-embed", 
         "-sharing",
@@ -11,5 +15,11 @@
         "anchors",
         "codeblock-label",
         "search-pro-kui"
-    ]
+    ],
+    "pluginsConfig": {
+        "mathjax": {
+            "forceSVG": true,
+            "version":  "2.7.6"
+        }
+    }
 }
