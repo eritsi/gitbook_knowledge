@@ -7,7 +7,7 @@
         "url-embed", 
         "-sharing",
         "sunlight-highlighter", "-highlight",
-        "copy-code-button",
+        "code",
         "hide-published-with",
         "anchors",
         "codeblock-label",
