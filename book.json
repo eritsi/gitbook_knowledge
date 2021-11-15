@@ -9,6 +9,8 @@
         "sunlight-highlighter", "-highlight",
         "copy-code-button",
         "hide-published-with",
-        "anchors"
+        "anchors",
+        "codeblock-label",
+        "search-pro-kui"
     ]
 }
