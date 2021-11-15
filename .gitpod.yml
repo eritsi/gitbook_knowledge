@@ -12,9 +12,11 @@ tasks:
       npm install del
       # mkdir docs
       # cd docs
-      npm install gitbook-plugin-advanced-emoji
-      npm install gitbook-plugin-hints
+      # npm install gitbook-plugin-advanced-emoji
+      # npm install gitbook-plugin-hints
       # npm install gitbook-plugin-tabs2
+      gitbook install hints
+      gitbook install tabs2
       gitbook init
       # gulp
       gitbook serve
