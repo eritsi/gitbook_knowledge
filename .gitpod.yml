@@ -21,6 +21,11 @@ tasks:
       gitbook install -g copy-code-button
       gitbook install -g anchors
       gitbook install -g theme-official
+      gitbook install -g theme-mobdoc
+      gitbook install -g ztbcms-docs
+      gitbook install -g theme-open-docs
+      gitbook install -g theme-busbud
+      gitbook install -g ysp-zhuti
       gitbook init
       # gulp
       gitbook serve
