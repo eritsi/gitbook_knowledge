@@ -29,6 +29,7 @@ tasks:
       gitbook install -g codeblock-label
       gitbook install -g search-pro-kui
       gitbook install -g code
+      gitbook install -g youtube-placeholder
       gitbook init
       # gulp
       gitbook serve

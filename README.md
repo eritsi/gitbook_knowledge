@@ -16,6 +16,9 @@ GitBookを試すためのリポジトリ
 https://flutter.dev/assets/videos/FastDev.mp4
 {% endurlembed %}
 
+YouTubeの場合はこちら
+{% youtube embed="KR8ESjGYsXI" %}{% endyoutube %}
+
 ## ヒント、ワーニングボックスの出し方です
 github上では反映されません。  
 `hint ~ endhint`で囲みます。working, danger, tip, infoで種類を切り替えます。
