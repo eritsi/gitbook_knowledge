@@ -13,7 +13,7 @@ GitBookを試すためのリポジトリ
 
 動画はこちら  
 {% urlembed %}
-https://flutter.dev/assets/videos/FastDev.mp4
+https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4
 {% endurlembed %}
 
 YouTubeの場合はこちら
