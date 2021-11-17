@@ -15,22 +15,18 @@ tasks:
       gitbook install -g advanced-emoji
       gitbook install -g hints     # https://www.npmjs.com/package/gitbook-plugin-hints
       # gitbook install -g todo  Error: Missing required argument #1 if (args[ii] == null) throw missingRequiredArg(ii)
-      # gitbook install -g graph
       # gitbook install -g mathjax
       gitbook install -g tabs2
       gitbook install -g url-embed # https://www.npmjs.com/package/gitbook-plugin-url-embed
       gitbook install -g hide-published-with
       # gitbook install -g sunlight-highlighter
-      # gitbook install -g copy-code-button
       gitbook install -g anchors
-      # gitbook install -g theme-official
-      # gitbook install -g theme-open-docs
-      # gitbook install -g theme-busbud
+      # gitbook install -g theme-official theme-open-docs theme-busbud
       gitbook install -g codeblock-label
       gitbook install -g search-pro-kui
       gitbook install -g code
       gitbook install -g youtube-placeholder
-      gitbook install -g graph
+      gitbook install -g graph katex amazon-jp-link
       gitbook init
       # gulp
       gitbook serve
