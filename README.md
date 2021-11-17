@@ -2,12 +2,12 @@
 GitBookを試すためのリポジトリ
 
 
-## 基本はHeading 2で書きます
+## 基本はHeading 2で記述
 
 基礎ですが強調の仕方、改行の仕方です。  
 **Flutter**とはGoogleが開発している**クロスプラットフォーム**のアプリケーションフレームワークです。
 
-## 画像と動画の貼り方です
+## 画像と動画の貼り方
 画像はこちら  
 [TOYOTAがFlutterを導入](https://techplay.jp/column/1516)して少し話題になっていました。
 
@@ -19,7 +19,7 @@ https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4
 YouTubeの場合はこちら
 {% youtube embed="KR8ESjGYsXI" %}{% endyoutube %}
 
-## ヒント、ワーニングボックスの出し方です
+## ヒント、ワーニングボックスの出し方
 github上では反映されません。  
 `hint ~ endhint`で囲みます。working, danger, tip, infoで種類を切り替えます。
 
@@ -40,7 +40,7 @@ hogehoge - tip
 この中は普通にMarkdownで記載  
 {% endhint %}
 
-## コードの埋め込み方です
+## コードの埋め込み
 codeブロックで囲みます。  
 
 ```
@@ -55,7 +55,7 @@ codeブロックで囲みます。
   }
 ```
 
-## コードをタブ形式で埋め込みます
+## コードをタブ形式で埋め込み
 tabsブロックでtabブロックを囲み、その中にcodeブロックを置きます。
 {% tabs %}
 {% tab title="viewmodel" %}
@@ -85,7 +85,7 @@ final postsProvider = StateProvider(
 {% endtab %}
 {% endtabs %}
 
-## グラフも描画できます  
+## グラフ描画 
 {% graph %}
     {
         "title":"cos(2*PI*x/2)*(1+0.5cos(2*PI*x/100))",     
@@ -104,3 +104,24 @@ final postsProvider = StateProvider(
         ]
     }
 {% endgraph %}
+
+## 数式記述
+Inline math: $$\int_{-\infty}^\infty g(x) dx$$
+
+
+Block math:
+
+$$
+\int_{-\infty}^\infty g(x) dx
+$$
+
+Or using the templating syntax:
+
+{% math %}\int_{-\infty}^\infty g(x) dx{% endmath %}
+
+## Amazon Linkの埋め込み
+Generate Link tag:
+{% AmazonJpLink "B01N59VNQY", "johndue-22" %}macOS Sierra{% endAmazonJpLink %}
+
+Generate Image tag:
+{% AmazonJpImage "B01N59VNQY", "johndue-22", "150" %}macOS Sierra{% endAmazonJpImage %}
