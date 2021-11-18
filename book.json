@@ -15,6 +15,6 @@
         "youtube-placeholder",
         "graph",
         "katex",
-        "test@git+https://github.com/eritsi/gitbook-plugin-test#1.0.0"
+        "test@git+https://github.com/eritsi/gitbook-plugin-test#master"
     ]
 }
