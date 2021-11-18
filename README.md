@@ -56,7 +56,7 @@ codeブロックで囲みます。
 ```
 
 ## コードをタブ形式で埋め込み
-tabsブロックでtabブロックを囲み、その中にcodeブロックを置きます。
+tabsブロックでtabブロックを囲み、その中にcodeブロックを置きます。  
 {% tabs %}
 {% tab title="viewmodel" %}
 ```dart
@@ -125,3 +125,10 @@ Generate Link tag:
 
 Generate Image tag:
 {% AmazonJpImage "B01N59VNQY", "johndue-22", "150" %}macOS Sierra{% endAmazonJpImage %}
+
+## 自作のプラグインを使用
+Generate Link tag:
+{% SlideJpLink "B01N59VNQY", "johndue-22" %}macOS Sierra{% endSlideJpLink %}
+
+Generate Image tag:
+{% SlideJpImage "B01N59VNQY", "johndue-22", "150" %}macOS Sierra{% endSlideJpImage %}
