@@ -15,6 +15,7 @@
         "youtube-placeholder",
         "graph",
         "katex",
+        "amazon-jp-link"
         "test@git+https://github.com/eritsi/gitbook-plugin-test#master"
     ]
 }
