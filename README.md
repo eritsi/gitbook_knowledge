@@ -127,8 +127,4 @@ Generate Image tag:
 {% AmazonJpImage "B01N59VNQY", "johndue-22", "150" %}macOS Sierra{% endAmazonJpImage %}
 
 ## 自作のプラグインを使用
-Generate Link tag:
-{% SlideJpLink "B01N59VNQY", "johndue-22" %}macOS Sierra{% endSlideJpLink %}
-
-Generate Image tag:
-{% SlideJpImage "B01N59VNQY", "johndue-22", "150" %}macOS Sierra{% endSlideJpImage %}
+{% SlidePageLink "http://www.slideshare.net/kanbara/abc2018springflutter-101476556", "5" %}macOS Sierra{% endSlidePageLink %}
