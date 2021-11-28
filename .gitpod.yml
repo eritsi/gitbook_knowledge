@@ -27,7 +27,7 @@ tasks:
       gitbook install -g search-pro-kui
       gitbook install -g code
       gitbook install -g youtube-placeholder
-      gitbook install -g graph katex amazon-jp-link mind-maps
+      gitbook install -g graph katex amazon-jp-link mind-maps noembed
       gitbook init
       # gulp
       gitbook serve
