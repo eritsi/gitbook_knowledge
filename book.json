@@ -17,6 +17,7 @@
         "katex",
         "amazon-jp-link",
         "mind-maps",
+        "noembed",
         "test@git+https://github.com/eritsi/gitbook-plugin-test#master"
     ]
 }
