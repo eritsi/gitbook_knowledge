@@ -135,6 +135,13 @@ Generate Image tag:
 # 2 bい
 # 3 cう
 ```
+## Noembedお試し
+{{ 'https://vimeo.com/31942602' | noembed }}
+{{ 'https://vimeo.com/31942602' | video }}
+{{ 'https://www.slideshare.net/kanbara/abc2018springflutter-101476556' | noembed }}
+
+{{ 'https://www.youtube.com/watch?v=8CP58OFP2Iw' | video }}
+{{ 'https://www.youtube.com/watch?v=8CP58OFP2Iw' | noembed }}
 
 
 ## 自作のプラグインを使用
