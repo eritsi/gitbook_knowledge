@@ -2,34 +2,19 @@
 tasks:
   - name: Install gitbook
     init: | 
-      # nvm install v13.14.0
-      # nvm install v12.18.2
-      nvm install v8.8 # gulpとコンパチブルなバージョン
-      # nvm install v7.2 # nvm ls-remote
+     nvm install v8.8 # gulpとコンパチブルなバージョン。v12.18.2, v13.14.0は検証中
       npm install -g gitbook-cli
       npm install -g xmlhttprequest
-      # npm install -g gulp@3.9.1
-      # npm install browser-sync
-      # npm install del
-      # mkdir docs
-      # cd docs
-      gitbook install -g advanced-emoji
+      gitbook install -g advanced-emoji tabs2 anchors code
+      gitbook install -g graph katex amazon-jp-link mind-maps noembed
       gitbook install -g hints     # https://www.npmjs.com/package/gitbook-plugin-hints
-      # gitbook install -g todo  Error: Missing required argument #1 if (args[ii] == null) throw missingRequiredArg(ii)
-      # gitbook install -g mathjax
-      gitbook install -g tabs2
       gitbook install -g url-embed # https://www.npmjs.com/package/gitbook-plugin-url-embed
       gitbook install -g hide-published-with
-      # gitbook install -g sunlight-highlighter
-      gitbook install -g anchors
-      # gitbook install -g theme-official theme-open-docs theme-busbud
       gitbook install -g codeblock-label
       gitbook install -g search-pro-kui
-      gitbook install -g code
       gitbook install -g youtube-placeholder
-      gitbook install -g graph katex amazon-jp-link mind-maps noembed
+      # gitbook install -g theme-official theme-open-docs theme-busbud
       gitbook init
-      # gulp
       gitbook serve
     command: echo 'Ready to start'
 
