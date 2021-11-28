@@ -16,6 +16,7 @@
         "graph",
         "katex",
         "amazon-jp-link",
+        "mind-maps",
         "test@git+https://github.com/eritsi/gitbook-plugin-test#master"
     ]
 }
