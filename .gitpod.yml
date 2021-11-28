@@ -7,7 +7,7 @@ tasks:
       nvm install v8.8 # gulpとコンパチブルなバージョン
       # nvm install v7.2 # nvm ls-remote
       npm install -g gitbook-cli
-      # npm install -g xmlhttprequest
+      npm install -g xmlhttprequest
       # npm install -g gulp@3.9.1
       # npm install browser-sync
       # npm install del
