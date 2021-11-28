@@ -126,5 +126,16 @@ Generate Link tag:
 Generate Image tag:
 {% AmazonJpImage "B01N59VNQY", "johndue-22", "150" %}macOS Sierra{% endAmazonJpImage %}
 
+## MindMapの埋め込み
+```mind:height=300,title=a mind map of something,color
+# 1 aあ
+## 1.1 aaああ
+### 1.1.1 aaaあああ
+## 1.2 abあい
+# 2 bい
+# 3 cう
+```
+
+
 ## 自作のプラグインを使用
 {% SlidePageLink "http://www.slideshare.net/kanbara/abc2018springflutter-101476556", "5" %}macOS Sierra{% endSlidePageLink %}
