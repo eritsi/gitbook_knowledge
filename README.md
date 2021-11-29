@@ -141,7 +141,4 @@ Generate Image tag:
   
 
 ## 自作のプラグインを使用
-工事中・・・
-```
-{% SlidePageLink "http://www.slideshare.net/kanbara/abc2018springflutter-101476556", "5" %}macOS Sierra{% endSlidePageLink %}
-```
+{{ 'https://www.slideshare.net/kanbara/abc2018springflutter-101476556' | slideshare(page='5') }}
