@@ -2,7 +2,7 @@
 tasks:
   - name: Install gitbook
     init: | 
-     nvm install v8.8 # gulpとコンパチブルなバージョン。v12.18.2, v13.14.0は検証中
+      nvm install v8.8 # gulpとコンパチブルなバージョン。v12.18.2, v13.14.0は検証中
       npm install -g gitbook-cli
       npm install -g xmlhttprequest
       gitbook install -g advanced-emoji tabs2 anchors code
