@@ -15,7 +15,7 @@ tasks:
       # gitbook install -g theme-official theme-open-docs theme-busbud
       gitbook init
       # wget -P ./node_modules/gitbook-plugin-graph/assets https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.min.js
-      wget -P ./node_modules/gitbook-plugin-graph/assets https://cdnjs.cloudflare.com/ajax/libs/mathjs/1.5.2/math.min.js
+      wget -P ./node_modules/gitbook-plugin-graph/assets https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.6.5/math.min.js
       sed -i -e "6i <script src=\"{{ 'gitbook-plugin-graph/math.min.js'|resolveAsset }}\"></script>" ./node_modules/gitbook-plugin-graph/_layouts/website/page.html
       gitbook serve
     command: echo 'Ready to start'
