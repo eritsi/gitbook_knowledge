@@ -4,7 +4,6 @@ tasks:
     init: | 
       nvm install v8.8 # gulpとコンパチブルなバージョン。v12.18.2, v13.14.0は検証中
       npm install -g gitbook-cli
-      npm install -g xmlhttprequest
       gitbook install -g advanced-emoji tabs2 anchors code
       gitbook install -g graph katex amazon-jp-link mind-maps noembed
       gitbook install -g hints     # https://www.npmjs.com/package/gitbook-plugin-hints
@@ -15,6 +14,8 @@ tasks:
       gitbook install -g youtube-placeholder
       # gitbook install -g theme-official theme-open-docs theme-busbud
       gitbook init
+      wget -P ./node_modules/gitbook-plugin-graph/assets https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.min.js
+      sed -i -e "6i <script src=\"{{ 'gitbook-plugin-graph/math.min.js'|resolveAsset }}\"></script>" ./node_modules/gitbook-plugin-graph/_layouts/website/page.html
       gitbook serve
     command: echo 'Ready to start'
 

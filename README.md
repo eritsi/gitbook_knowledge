@@ -105,6 +105,35 @@ final postsProvider = StateProvider(
     }
 {% endgraph %}
 
+## グラフ描画2 
+{% graph %}
+    {
+        "title":"ガンマ関数の描画テスト",     
+        "grid":true,
+        "xAxis": {
+            "label":"X軸",
+            "domain": [-10,10]
+        },
+        "yAxis": {
+            "label":"Y軸",
+            "domain": [-6,6]
+        },
+        "data": [
+              { "fn": "sin(x)"},
+              { "fn": "x"},
+              { "fn": "x - x^3/3!",
+                "sampler": "builtIn",
+                "graphType": "polyline"},
+              { "fn": "x - x^3/3! + x^5/5!", 
+                "sampler": "builtIn",
+                "graphType": "polyline"},
+              { "fn": "gamma(x)", 
+                "sampler": "builtIn",
+                "graphType": "polyline"}
+          ]
+    }
+{% endgraph %}
+
 ## 数式記述
 Inline math: $$\int_{-\infty}^\infty g(x) dx$$
 
