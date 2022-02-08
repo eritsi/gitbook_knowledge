@@ -18,6 +18,7 @@
         "amazon-jp-link",
         "mind-maps",
         "noembed",
+        "collapsible-chapters",
         "slideshare@git+https://github.com/eritsi/gitbook-plugin-slideshare.git#master"
     ]
 }

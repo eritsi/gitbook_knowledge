@@ -12,13 +12,17 @@ tasks:
       gitbook install -g codeblock-label
       gitbook install -g search-pro-kui
       gitbook install -g youtube-placeholder
+      gitbook install -g collapsible-chapters
       # gitbook install -g theme-official theme-open-docs theme-busbud
       gitbook init
       # wget -P ./node_modules/gitbook-plugin-graph/assets https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.min.js
       wget -P ./node_modules/gitbook-plugin-graph/assets https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.6.5/math.min.js
       sed -i -e "6i <script src=\"{{ 'gitbook-plugin-graph/math.min.js'|resolveAsset }}\"></script>" ./node_modules/gitbook-plugin-graph/_layouts/website/page.html
       gitbook serve
-    command: echo 'Ready to start'
+    command: |
+      echo 'Ready to start' 
+      # tar cvfz pj.tar.gz SUMMARY.md ch1/* ch2/* ch3/* ch4/*
+      # tar xvfz pj.tar.gz
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
