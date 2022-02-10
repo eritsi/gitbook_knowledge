@@ -17,7 +17,7 @@ https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4
 {% endurlembed %}
 
 YouTubeの場合はこちら
-{% youtube embed="KR8ESjGYsXI" %}{% endyoutube %}
+{% youtube embed="g-0B_Vfc9qM" %}{% endyoutube %}
 
 ## ヒント、ワーニングボックスの出し方
 github上では反映されません。  
@@ -169,5 +169,7 @@ Generate Image tag:
 {{ 'https://www.slideshare.net/kanbara/abc2018springflutter-101476556' | noembed }}
   
 
-## 自作のプラグインを使用
+## 自作のプラグインを使用  
+上のslideshareのリンク先は80スライドありますが、スライド5だけ埋め込みたい・・・という場合に使用します。  
+スライド5と合致していることを確かめてみてください。  
 {{ 'https://www.slideshare.net/kanbara/abc2018springflutter-101476556' | slideshare(page='5') }}
