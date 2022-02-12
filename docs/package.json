@@ -1,0 +1,38 @@
+{
+  "name": "gitbook_from_gitpod",
+  "version": "0.1.0",
+  "description": "original plugin(slideshare) and modified gitbook-plugin-graph for extend function availability such as gamma function",
+  "main": "N/A",
+  "dependencies": {
+    "gitbook-plugin-advanced-emoji": "^0.2.2",
+    "gitbook-plugin-amazon-jp-link": "^0.0.6",
+    "gitbook-plugin-anchors": "^0.7.1",
+    "gitbook-plugin-code": "^0.1.0",
+    "gitbook-plugin-codeblock-label": "^1.0.1",
+    "gitbook-plugin-hide-published-with": "^1.0.3",
+    "gitbook-plugin-graph": "^0.1.0",
+    "gitbook-plugin-hints": "^1.0.2",
+    "gitbook-plugin-katex": "^1.1.4",
+    "gitbook-plugin-mind-maps": "^1.1.9",
+    "gitbook-plugin-noembed": "^0.1.0",
+    "gitbook-plugin-search-pro-kui": "^1.0.0",
+    "gitbook-plugin-tabs2": "^0.1.3",
+    "gitbook-plugin-url-embed": "^1.0.0",
+    "gitbook-plugin-slideshare": "^0.0.2",
+    "gitbook-plugin-youtube-placeholder": "^1.2.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eritsi/gitbook_test.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eritsi/gitbook_test/issues"
+  },
+  "homepage": "https://github.com/eritsi/gitbook_test#readme"
+}

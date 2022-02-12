@@ -1,0 +1,654 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>gitbook-pluginの開発 · GitBook Tutorial</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-tabs2/tabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-codeblock-label/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-search-pro-kui/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-mind-maps/mindmaps.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-noembed/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-collapsible-chapters/collapsible-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-slideshare/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    <script src="gitbook-plugin-graph/d3.min.js"></script>
+<script src="gitbook-plugin-graph/math.min.js"></script>
+    <script src="gitbook-plugin-graph/function-plot.js"></script>    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.1.1" data-path="plugin.html">
+            
+                <a href="plugin.html">
+            
+                    
+                    gitbook-pluginの開発
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >gitbook-pluginの開発</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="gitbook-plugin&#x306E;&#x958B;&#x767A;"><a name="gitbook-plugin&#x306E;&#x958B;&#x767A;" class="plugin-anchor" href="#gitbook-plugin&#x306E;&#x958B;&#x767A;"><i class="fa fa-link" aria-hidden="true"></i></a>gitbook plugin&#x306E;&#x958B;&#x767A;</h2>
+<h3 id="&#x5143;&#x516C;&#x5F0F;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;"><a name="&#x5143;&#x516C;&#x5F0F;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;" class="plugin-anchor" href="#&#x5143;&#x516C;&#x5F0F;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;"><i class="fa fa-link" aria-hidden="true"></i></a>(&#x5143;)&#x516C;&#x5F0F;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;</h3>
+<p><a href="https://tinydew4.gitbooks.io/gitbook/content/docs/plugins/" target="_blank">https://tinydew4.gitbooks.io/gitbook/content/docs/plugins/</a></p>
+<h3 id="plugin&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x306B;&#x3064;&#x3044;&#x3066;"><a name="plugin&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x306B;&#x3064;&#x3044;&#x3066;" class="plugin-anchor" href="#plugin&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x306B;&#x3064;&#x3044;&#x3066;"><i class="fa fa-link" aria-hidden="true"></i></a>plugin&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x306B;&#x3064;&#x3044;&#x3066;</h3>
+<p>npm&#x767B;&#x9332;&#x524D;&#x306E;&#x30C6;&#x30B9;&#x30C8;&#x65B9;&#x6CD5;&#x306B;&#x3064;&#x3044;&#x3066;&#x306F;<a href="https://tinydew4.gitbooks.io/gitbook/content/docs/plugins/testing.html" target="_blank">&#x3053;&#x3061;&#x3089;</a></p>
+<p>npm&#x767B;&#x9332;&#x306F;</p>
+<pre><code>npm publish
+</code></pre><ul>
+<li><p>npm&#x306B;&#x767B;&#x9332;&#x3057;&#x3066;&#x3044;&#x308B;&#x5834;&#x5408;&#x306E;&#x4F7F;&#x3044;&#x65B9;<br><div class="markdown-tabs"><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-878" aria-controls="tab-878" role="tab" data-toggle="tab">book.json</a></li><li role="presentation" class=""><a href="#tab-879" aria-controls="tab-879" role="tab" data-toggle="tab">.gitpod.yml</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-878"><pre><code class="lang-json">    <span class="hljs-string">&quot;plugins&quot;</span>: [
+        <span class="hljs-string">&quot;my-plugin&quot;</span>]</code></pre>
+</div><div role="tabpanel" class="tab-pane " id="tab-879"><pre><code class="lang-yaml">gitbook install -g &lt;my-plugin<span class="hljs-string">&gt;</span></code></pre>
+</div></div></div></p>
+</li>
+<li><p>npm&#x306B;&#x767B;&#x9332;&#x3057;&#x3066;&#x3044;&#x306A;&#x3044;&#x5834;&#x5408;&#x306E;&#x4F7F;&#x3044;&#x65B9;
+<div class="markdown-tabs"><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-709" aria-controls="tab-709" role="tab" data-toggle="tab">book.json</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-709"><pre><code class="lang-json">    <span class="hljs-string">&quot;plugins&quot;</span>: [
+        <span class="hljs-string">&quot;my-plugin@git+https://github.com/&lt;git_account&gt;/&lt;plugin_repository&gt;.git#master&quot;</span>]</code></pre>
+</div></div></div></p>
+</li>
+</ul>
+<h3 id="plugin&#x306E;&#x7A2E;&#x985E;&#x306B;&#x3064;&#x3044;&#x3066;"><a name="plugin&#x306E;&#x7A2E;&#x985E;&#x306B;&#x3064;&#x3044;&#x3066;" class="plugin-anchor" href="#plugin&#x306E;&#x7A2E;&#x985E;&#x306B;&#x3064;&#x3044;&#x3066;"><i class="fa fa-link" aria-hidden="true"></i></a>plugin&#x306E;&#x7A2E;&#x985E;&#x306B;&#x3064;&#x3044;&#x3066;</h3>
+<h4 id="hooks"><a name="hooks" class="plugin-anchor" href="#hooks"><i class="fa fa-link" aria-hidden="true"></i></a>Hooks</h4>
+<h4 id="blocks"><a name="blocks" class="plugin-anchor" href="#blocks"><i class="fa fa-link" aria-hidden="true"></i></a>Blocks</h4>
+<p><code>{%...%}</code> &#x3067;&#x547C;&#x3073;&#x51FA;&#x3059;&#x30D6;&#x30ED;&#x30C3;&#x30AF;&#x306E;&#x6319;&#x52D5;&#x3092;&#x5B9A;&#x7FA9;&#x3067;&#x304D;&#x308B;&#x3002;&#x5F15;&#x6570;&#x3068;Body&#x3092;&#x4F7F;&#x3063;&#x3066;HTML&#x3092;&#x8FD4;&#x3059;   </p>
+<p><a href="https://github.com/marcopeg/gitbook-plugin-youtube-placeholder/blob/master/index.js" target="_blank">YouTube-Placeholder</a></p>
+<p><div class="markdown-tabs"><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-688" aria-controls="tab-688" role="tab" data-toggle="tab">index.js</a></li><li role="presentation" class=""><a href="#tab-689" aria-controls="tab-689" role="tab" data-toggle="tab">summary.md</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-688"><pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+    blocks: {
+        youtube: (block) =&gt;
+            <span class="hljs-string">`&lt;div style=&quot;position: relative;width: 100%;height: 0;padding-bottom: 56.25%;&quot;&gt;
+                &lt;iframe
+                    src=&quot;//www.youtube.com/embed/<span class="hljs-subst">${block.kwargs.embed}</span>&quot;
+                    style=&quot;position: absolute;top: 0;left: 0;width: 100%;height: 100%;&quot;
+                    frameborder=&quot;0&quot;
+                    allowfullscreen
+                &gt;&lt;/iframe&gt;
+            &lt;/div&gt;`</span>,
+    },
+}</code></pre>
+</div><div role="tabpanel" class="tab-pane " id="tab-689"><pre><code class="lang-markdown">{% youtube embed=&quot;G9J-KcqcQYY&quot; %}{% endyoutube %}</code></pre>
+</div></div></div></p>
+<p><a href="https://github.com/morizyun/gitbook-plugin-amazon-jp-link/blob/master/index.js" target="_blank">Amazon-jp-link</a><br><div class="markdown-tabs"><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-576" aria-controls="tab-576" role="tab" data-toggle="tab">index.js</a></li><li role="presentation" class=""><a href="#tab-577" aria-controls="tab-577" role="tab" data-toggle="tab">summary.md</a></li><li role="presentation" class=""><a href="#tab-578" aria-controls="tab-578" role="tab" data-toggle="tab">result.html</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-576"><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderAmazonJpLink</span>(<span class="hljs-params">asin, tag, body</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-string">`&lt;a href=&quot;http://www.amazon.co.jp/gp/product/<span class="hljs-subst">${asin
+            }</span>/ref=as_li_qf_sp_asin_il?ie=UTF8&amp;amp;camp=247&amp;amp;creative=1211&amp;amp;creativeASIN=<span class="hljs-subst">${
+            asin}</span>&amp;amp;linkCode=as2&amp;amp;tag=<span class="hljs-subst">${tag}</span>&quot; target=&quot;_blank&quot;&gt;<span class="hljs-subst">${
+            body}</span>&lt;/a&gt;&lt;img src=&quot;http://www.assoc-amazon.jp/e/ir?t=<span class="hljs-subst">${tag
+            }</span>&amp;amp;l=as2&amp;amp;o=9&amp;amp;a=<span class="hljs-subst">${asin}</span>&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot;`</span> +
+        <span class="hljs-string">&apos; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot;&gt;&apos;</span>;
+}
+
+<span class="hljs-built_in">module</span>.exports = {
+  blocks: {
+    AmazonJpLink: {
+      process(block) {
+        <span class="hljs-keyword">return</span> renderAmazonJpLink(block.args[<span class="hljs-number">0</span>], block.args[<span class="hljs-number">1</span>], block.body);
+      },
+    },
+    AmazonJpImage: {
+      process(block) {
+        <span class="hljs-keyword">const</span> asin = block.args[<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">const</span> tag = block.args[<span class="hljs-number">1</span>];
+        <span class="hljs-keyword">let</span> size = block.args[<span class="hljs-number">2</span>];
+        <span class="hljs-keyword">if</span> (!size) { size = <span class="hljs-number">150</span>; }
+        <span class="hljs-keyword">const</span> imageSize = <span class="hljs-built_in">parseInt</span>(size, <span class="hljs-number">10</span>) * <span class="hljs-number">2</span>;
+
+        <span class="hljs-keyword">const</span> body = <span class="hljs-string">`&lt;img border=&quot;0&quot; src=&quot;http://ws.assoc-amazon.jp/widgets/q?_encoding=UTF8&amp;amp;ASIN=<span class="hljs-subst">${
+                    asin}</span>&amp;amp;Format=_SL<span class="hljs-subst">${imageSize}</span>_&amp;amp;ID=AsinImage&amp;amp;MarketPlace=JP&amp;amp;ServiceVersion=20070822`</span> +
+                    <span class="hljs-string">`&amp;amp;WS=1&amp;amp;tag=<span class="hljs-subst">${tag}</span>&quot; width=&quot;<span class="hljs-subst">${size}</span>&quot; style=&quot;float: left; margin: 0 20px 20px 0;&quot; /&gt;`</span>;
+
+        <span class="hljs-keyword">return</span> renderAmazonJpLink(asin, tag, body);
+      },
+    },
+  },
+};</code></pre>
+</div><div role="tabpanel" class="tab-pane " id="tab-577"><pre><code class="lang-markdown">{% AmazonJpLink &quot;B01N59VNQY&quot;, &quot;johndue-22&quot; %}macOS Sierra{% endAmazonJpLink %}</code></pre>
+</div><div role="tabpanel" class="tab-pane " id="tab-578"><pre><code class="lang-markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;http://www.amazon.co.jp/gp/product/B01N59VNQY/ref=as_li_qf_sp_asin_il?ie=UTF8&amp;amp;camp=247&amp;amp;creative=1211&amp;amp;creativeASIN=B01N59VNQY&amp;amp;linkCode=as2&amp;amp;tag=johndue-22&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span>&gt;</span></span>
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">border</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://ws.assoc-amazon.jp/widgets/q?_encoding=UTF8&amp;amp;ASIN=B01N59VNQY&amp;amp;Format=_SL300_&amp;amp;ID=AsinImage&amp;amp;MarketPlace=JP&amp;amp;ServiceVersion=20070822&amp;amp;WS=1&amp;amp;tag=johndue-22&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;150&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;float: left; margin: 0 20px 20px 0;&quot;</span> /&gt;</span></span>
+<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span>
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://www.assoc-amazon.jp/e/ir?t=johndue-22&amp;amp;l=as2&amp;amp;o=9&amp;amp;a=B01N59VNQY&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">border</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;border:none !important; margin:0px !important;&quot;</span>&gt;</span></span></code></pre>
+</div></div></div></p>
+<h4 id="filters"><a name="filters" class="plugin-anchor" href="#filters"><i class="fa fa-link" aria-hidden="true"></i></a>Filters</h4>
+<p>pipe&#x30AA;&#x30DA;&#x30EC;&#x30FC;&#x30BF;&#x30FC;&#x3092;&#x7E4B;&#x3044;&#x3067;&#x5909;&#x6570;&#x3092;&#x95A2;&#x6570;&#x306B;&#x6D41;&#x3057;&#x3066;&#x3044;&#x304D;&#x3001;&#x5B8C;&#x6210;&#x3057;&#x305F;HTML&#x3092;&#x8FD4;&#x3059;<br><a href="https://github.com/1cgonza/gitbook-plugin-noembed/blob/master/index.js" target="_blank">Noembeded</a>
+<div class="markdown-tabs"><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-808" aria-controls="tab-808" role="tab" data-toggle="tab">index.js</a></li><li role="presentation" class=""><a href="#tab-809" aria-controls="tab-809" role="tab" data-toggle="tab">assets/scripts.js</a></li><li role="presentation" class=""><a href="#tab-810" aria-controls="tab-810" role="tab" data-toggle="tab">summary.md</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-808"><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">noembed</span>(<span class="hljs-params">url</span>) </span>{
+  <span class="hljs-keyword">var</span> endpoint = <span class="hljs-string">&apos;//noembed.com/embed?&apos;</span>;
+
+  <span class="hljs-keyword">if</span> (!!url.length) {
+    endpoint += <span class="hljs-string">&apos;url=&apos;</span> + <span class="hljs-built_in">encodeURIComponent</span>(url);
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&lt;div class=&quot;noembed-wrapper&quot; data-url=&quot;&apos;</span> + endpoint + <span class="hljs-string">&apos;&quot;&gt;&apos;</span> + url + <span class="hljs-string">&apos;&lt;/div&gt;&apos;</span>;
+  }
+
+  <span class="hljs-keyword">return</span> url;
+}
+
+<span class="hljs-built_in">module</span>.exports = {
+  website: {
+    assets: <span class="hljs-string">&apos;./assets&apos;</span>,
+    js: [<span class="hljs-string">&apos;scripts.js&apos;</span>],
+    css: [<span class="hljs-string">&apos;style.css&apos;</span>]
+  },
+  filters: {
+    noembed: noembed,
+    video: noembed,
+  }
+};</code></pre>
+</div><div role="tabpanel" class="tab-pane " id="tab-809"><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderNoembed</span>(<span class="hljs-params">event</span>) </span>{
+  <span class="hljs-keyword">var</span> iframes         = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&apos;.noembed-wrapper&apos;</span>);
+  <span class="hljs-keyword">var</span> loaded          = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">var</span> total           = iframes.length;
+  <span class="hljs-keyword">var</span> externalScripts = [];
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">calculateAspectRatioFit</span>(<span class="hljs-params">srcWidth, srcHeight, maxWidth, maxHeight</span>) </span>{
+    <span class="hljs-keyword">var</span> ratio = <span class="hljs-built_in">Math</span>.min(maxWidth / srcWidth, maxHeight / srcHeight);
+
+    <span class="hljs-keyword">return</span> {width: (srcWidth * ratio) | <span class="hljs-number">0</span>, height: (srcHeight * ratio) | <span class="hljs-number">0</span>};
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ajaxReq</span>(<span class="hljs-params">url, callback</span>) </span>{
+    <span class="hljs-keyword">var</span> req = <span class="hljs-keyword">new</span> XMLHttpRequest();
+    req.onreadystatechange = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">if</span> (req.readyState === XMLHttpRequest.DONE) {
+        <span class="hljs-keyword">if</span> (req.status === <span class="hljs-number">200</span>) {
+          callback(<span class="hljs-built_in">JSON</span>.parse(req.responseText));
+        }
+      }
+    };
+
+    req.open(<span class="hljs-string">&apos;GET&apos;</span>, url, <span class="hljs-literal">true</span>);
+    req.send();
+    <span class="hljs-keyword">return</span> req;
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkForScripts</span>(<span class="hljs-params">html</span>) </span>{
+    <span class="hljs-keyword">var</span> tempElement = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;div&apos;</span>);
+    tempElement.innerHTML = html;
+
+    <span class="hljs-keyword">var</span> scripts = tempElement.querySelectorAll(<span class="hljs-string">&apos;script&apos;</span>);
+
+    <span class="hljs-keyword">if</span> (scripts.length) {
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; scripts.length; i++) {
+        <span class="hljs-keyword">if</span> (externalScripts.indexOf(scripts[i].src) &lt; <span class="hljs-number">0</span>) {
+          externalScripts.push(scripts[i].src);
+          scripts[i].parentElement.removeChild(scripts[i]);
+        }
+      }
+    }
+
+    <span class="hljs-keyword">return</span> tempElement;
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getVideoData</span>(<span class="hljs-params">url, wrapper</span>) </span>{
+    <span class="hljs-keyword">if</span> (!!url.length) {
+      ajaxReq(url, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+        <span class="hljs-keyword">var</span> safeHtml = <span class="hljs-string">&apos;&apos;</span>;
+
+        <span class="hljs-keyword">if</span> (res.html) {
+          safeHtml = checkForScripts(res.html);
+
+          <span class="hljs-keyword">if</span> (res.type === <span class="hljs-string">&apos;video&apos;</span> &amp;&amp; res.hasOwnProperty(<span class="hljs-string">&apos;width&apos;</span>) &amp;&amp; res.hasOwnProperty(<span class="hljs-string">&apos;height&apos;</span>)) {
+            <span class="hljs-keyword">var</span> dims = calculateAspectRatioFit(res.width, res.height, wrapper.clientWidth, <span class="hljs-number">9999</span>);
+            wrapper.classList.add(<span class="hljs-string">&apos;noembed-type-video&apos;</span>);
+            wrapper.style.width = dims.width + <span class="hljs-string">&apos;px&apos;</span>;
+            wrapper.style.height = dims.height + <span class="hljs-string">&apos;px&apos;</span>;
+          }
+
+        } <span class="hljs-keyword">else</span> {
+          safeHtml = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;a&apos;</span>);
+          safeHtml.href = res.url;
+          safeHtml.innerText = res.url;
+        }
+
+        wrapper.innerHTML = <span class="hljs-string">&apos;&apos;</span>;
+        wrapper.appendChild(safeHtml);
+
+        loaded++;
+
+        <span class="hljs-keyword">if</span> (loaded === total) {
+          externalScripts.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">script</span>) </span>{
+            <span class="hljs-keyword">var</span> newScript = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;script&apos;</span>);
+            newScript.src = script;
+            <span class="hljs-built_in">document</span>.body.appendChild(newScript);
+          });
+        }
+      });
+    }
+  }
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; iframes.length; i++) {
+    <span class="hljs-keyword">var</span> wrapper = iframes[i];
+    <span class="hljs-keyword">var</span> url     = wrapper.dataset.url;
+
+    getVideoData(url, wrapper);
+  }
+}
+
+<span class="hljs-built_in">require</span>([<span class="hljs-string">&apos;gitbook&apos;</span>], <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">gitbook</span>) </span>{
+  gitbook.events.on(<span class="hljs-string">&apos;page.change&apos;</span>, renderNoembed);
+});</code></pre>
+</div><div role="tabpanel" class="tab-pane " id="tab-810"><pre><code class="lang-markdown">{{ &apos;https://www.slideshare.net/kanbara/abc2018springflutter-101476556&apos; | noembed }}</code></pre>
+</div></div></div><br><a href="https://github.com/eritsi/gitbook-plugin-slideshare/blob/master/index.js" target="_blank">&#x81EA;&#x4F5C;slideshare&#x30DA;&#x30FC;&#x30B8;&#x6307;&#x5B9A;</a>  </p>
+<ul>
+<li>&#x958B;&#x767A;&#x306E;&#x6D41;&#x308C;  <ol>
+<li>&#x30D6;&#x30E9;&#x30A6;&#x30B6;&#x4E0A;&#x3067;&#x3001;Noembed&#x306B;&#x76EE;&#x7684;&#x306E;url&#x3092;&#x5165;&#x308C;&#x305F;&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x306E;&#x30EC;&#x30B9;&#x30DD;&#x30F3;&#x30B9;&#x3092;&#x898B;&#x308B; <a href="https://noembed.com/embed?url=https%3A%2F%2Fwww.slideshare.net%2Fkanbara%2Fabc2018springflutter-101476556" target="_blank">&#x4F8B;:slideshare&#x306E;&#x30EC;&#x30B9;&#x30DD;&#x30F3;&#x30B9;</a>  </li>
+<li>&#x53D6;&#x308A;&#x51FA;&#x3057;&#x305F;&#x3044;&#x30BF;&#x30B0;&#x3092;&#x30E1;&#x30E2;&#x3059;&#x308B;  </li>
+<li>&#x30EC;&#x30B9;&#x30DD;&#x30F3;&#x30B9;&#x306E;&#x30BF;&#x30B0;&#x8FD4;&#x308A;&#x5024;&#x3092;&#x4F7F;&#x3063;&#x3066;&#x3001;&#x76EE;&#x7684;&#x306E;HTML&#x3092;&#x5B8C;&#x6210;&#x3055;&#x305B;&#x308B;  <ol>
+<li>&#x5148;&#x307B;&#x3069;&#x306E;&#x4F8B;&#x3067;&#x8A00;&#x3046;&#x3068;&#x3001;<code>slide_image_baseurl</code> &#x3084; <code>slide_image_baseurl_suffix</code> &#x306B;&#x5F53;&#x305F;&#x308A;&#x3092;&#x3064;&#x3051;&#x3001;slideshare&#x306E;Embed iframe&#x30BF;&#x30B0;&#x3092;&#x771F;&#x4F3C;&#x305F;&#x51FA;&#x529B;&#x3092;&#x76EE;&#x6307;&#x3059;</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<p><div class="markdown-tabs"><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-271" aria-controls="tab-271" role="tab" data-toggle="tab">index.js</a></li><li role="presentation" class=""><a href="#tab-272" aria-controls="tab-272" role="tab" data-toggle="tab">assets/scripts.js</a></li><li role="presentation" class=""><a href="#tab-273" aria-controls="tab-273" role="tab" data-toggle="tab">summary.md</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-271"><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">slideshare</span>(<span class="hljs-params">url, kwargs</span>) </span>{
+  <span class="hljs-keyword">var</span> endpoint = <span class="hljs-string">&apos;//noembed.com/embed?&apos;</span>;
+  <span class="hljs-keyword">var</span> page = kwargs.page
+
+  <span class="hljs-keyword">if</span> (!!url.length) {
+    endpoint += <span class="hljs-string">&apos;url=&apos;</span> + <span class="hljs-built_in">encodeURIComponent</span>(url);
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&lt;div class=&quot;slideshare-wrapper&quot; data-url=&quot;&apos;</span> + endpoint + <span class="hljs-string">&apos;&quot; data-page=&apos;</span> + page + <span class="hljs-string">&apos;&gt;&apos;</span> + url + <span class="hljs-string">&apos;&lt;/div&gt;&apos;</span>;
+  }
+
+  <span class="hljs-keyword">return</span> url;
+}
+
+<span class="hljs-built_in">module</span>.exports = {
+  website: {
+    assets: <span class="hljs-string">&apos;./assets&apos;</span>,
+    js: [<span class="hljs-string">&apos;scripts.js&apos;</span>],
+    css: [<span class="hljs-string">&apos;style.css&apos;</span>]
+  },
+  filters: {
+    slideshare: slideshare,
+  }
+};</code></pre>
+</div><div role="tabpanel" class="tab-pane " id="tab-272"><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderSlideshare</span>(<span class="hljs-params">event</span>) </span>{
+  <span class="hljs-keyword">var</span> iframes         = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&apos;.slideshare-wrapper&apos;</span>);
+  <span class="hljs-keyword">var</span> loaded          = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">var</span> total           = iframes.length;
+  <span class="hljs-keyword">var</span> externalScripts = [];
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ajaxReq</span>(<span class="hljs-params">url, callback</span>) </span>{
+    <span class="hljs-keyword">var</span> req = <span class="hljs-keyword">new</span> XMLHttpRequest();
+    req.onreadystatechange = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">if</span> (req.readyState === XMLHttpRequest.DONE) {
+        <span class="hljs-keyword">if</span> (req.status === <span class="hljs-number">200</span>) {
+          callback(<span class="hljs-built_in">JSON</span>.parse(req.responseText));
+        }
+      }
+    };
+
+    req.open(<span class="hljs-string">&apos;GET&apos;</span>, url, <span class="hljs-literal">true</span>);
+    req.send();
+    <span class="hljs-keyword">return</span> req;
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getVideoData</span>(<span class="hljs-params">url, wrapper</span>) </span>{
+    <span class="hljs-keyword">if</span> (!!url.length) {
+      ajaxReq(url, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+        <span class="hljs-keyword">var</span> safeHtml = <span class="hljs-string">&apos;&apos;</span>;
+
+        <span class="hljs-keyword">if</span> (res.html) {
+          safeHtml = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;img&apos;</span>);
+          safeHtml.src = res.slide_image_baseurl + page + res.slide_image_baseurl_suffix;
+          safeHtml.innerText = res.title;
+          <span class="hljs-comment">// safeHtml = checkForScripts(res.html);</span>
+
+        } <span class="hljs-keyword">else</span> {
+          safeHtml = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;a&apos;</span>);
+          safeHtml.href = res.url;
+          safeHtml.innerText = res.url;
+        }
+
+        wrapper.innerHTML = <span class="hljs-string">&apos;&apos;</span>;
+        wrapper.appendChild(safeHtml);
+
+        loaded++;
+
+        <span class="hljs-keyword">if</span> (loaded === total) {
+          externalScripts.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">script</span>) </span>{
+            <span class="hljs-keyword">var</span> newScript = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;script&apos;</span>);
+            newScript.src = script;
+            <span class="hljs-built_in">document</span>.body.appendChild(newScript);
+          });
+        }
+      });
+    }
+  }
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; iframes.length; i++) {
+    <span class="hljs-keyword">var</span> wrapper = iframes[i];
+    <span class="hljs-keyword">var</span> url     = wrapper.dataset.url;
+    <span class="hljs-keyword">var</span> page    = wrapper.dataset.page;
+
+    getVideoData(url, wrapper);
+  }
+}
+
+<span class="hljs-built_in">require</span>([<span class="hljs-string">&apos;gitbook&apos;</span>], <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">gitbook</span>) </span>{
+  gitbook.events.on(<span class="hljs-string">&apos;page.change&apos;</span>, renderSlideshare);
+});</code></pre>
+</div><div role="tabpanel" class="tab-pane " id="tab-273"><pre><code class="lang-markdown">{{ &apos;https://www.slideshare.net/kanbara/abc2018springflutter-101476556&apos; | slideshare(page=&apos;5&apos;) }}</code></pre>
+</div></div></div>  </p>
+<h3 id="githubio&#x3067;&#x306E;&#x516C;&#x958B;&#x307E;&#x3067;"><a name="githubio&#x3067;&#x306E;&#x516C;&#x958B;&#x307E;&#x3067;" class="plugin-anchor" href="#githubio&#x3067;&#x306E;&#x516C;&#x958B;&#x307E;&#x3067;"><i class="fa fa-link" aria-hidden="true"></i></a>github.io&#x3067;&#x306E;&#x516C;&#x958B;&#x307E;&#x3067;</h3>
+<p><a href="https://r-ngtm.hatenablog.com/entry/2020/06/18/193235" target="_blank">&#x53C2;&#x8003;&#x30B5;&#x30A4;&#x30C8;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"gitbook-pluginの開発","level":"1.1.1","depth":2,"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[{"title":"gitbook-pluginの開発","level":"1.1.1","depth":2,"path":"gitbook/plugin.md","ref":"gitbook/plugin.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["hints","advanced-emoji","tabs2","url-embed","-sharing","code","hide-published-with","anchors","codeblock-label","search-pro-kui","youtube-placeholder","graph","katex","amazon-jp-link","mind-maps","noembed","collapsible-chapters","slideshare@git+https://github.com/eritsi/gitbook-plugin-slideshare.git#master"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"codeblock-label":{},"search":{},"collapsible-chapters":{},"youtube-placeholder":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"slideshare":{},"graph":{},"hide-published-with":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"mind-maps":{},"tabs2":{},"highlight":{},"amazon-jp-link":{},"noembed":{},"search-pro-kui":{},"url-embed":{},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GitBook Tutorial","gitbook":"*","description":"This is a gitbook example"},"file":{"path":"gitbook/plugin.md","mtime":"2022-02-12T07:36:26.471Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-12T07:36:58.893Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook.js"></script>
+    <script src="theme.js"></script>
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-tabs2/tabs.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-hide-published-with/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-search-pro-kui/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-search-pro-kui/search.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-mind-maps/mindmaps.dist.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-noembed/scripts.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-collapsible-chapters/collapsible-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-slideshare/scripts.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

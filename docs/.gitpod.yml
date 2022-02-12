@@ -1,0 +1,30 @@
+# List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
+tasks:
+  - name: Install gitbook
+    init: | 
+      nvm install v8.8 # gulpとコンパチブルなバージョン。v12.18.2, v13.14.0は検証中
+      npm install -g gitbook-cli
+      gitbook install -g advanced-emoji tabs2 anchors code
+      gitbook install -g graph katex amazon-jp-link mind-maps noembed
+      gitbook install -g hints     # https://www.npmjs.com/package/gitbook-plugin-hints
+      gitbook install -g url-embed # https://www.npmjs.com/package/gitbook-plugin-url-embed
+      gitbook install -g hide-published-with
+      gitbook install -g codeblock-label
+      gitbook install -g search-pro-kui
+      gitbook install -g youtube-placeholder
+      gitbook install -g collapsible-chapters
+      # gitbook install -g theme-official theme-open-docs theme-busbud
+      gitbook init
+      # wget -P ./node_modules/gitbook-plugin-graph/assets https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.min.js
+      wget -P ./node_modules/gitbook-plugin-graph/assets https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.6.5/math.min.js
+      sed -i -e "6i <script src=\"{{ 'gitbook-plugin-graph/math.min.js'|resolveAsset }}\"></script>" ./node_modules/gitbook-plugin-graph/_layouts/website/page.html
+      gitbook serve
+    command: |
+      echo 'Ready to start' 
+      # tar cvfz pj.tar.gz SUMMARY.md ch1/* ch2/* ch3/* ch4/*
+      # tar xvfz pj.tar.gz
+
+# List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
+ports:
+  - port: 4000
+    onOpen: open-preview
