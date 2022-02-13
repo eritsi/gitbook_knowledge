@@ -1,3 +1,5 @@
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/eritsi/gitbook_knowledge)
+
 # gitbook_test
 GitBookを試すためのリポジトリ
 

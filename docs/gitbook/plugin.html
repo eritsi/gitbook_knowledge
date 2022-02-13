@@ -110,6 +110,8 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="jsfiddle2gitbook.html" />
+    
     
     <link rel="prev" href="../" />
     
@@ -164,6 +166,19 @@
             
                     
                     gitbook-pluginの開発
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="jsfiddle2gitbook.html">
+            
+                <a href="jsfiddle2gitbook.html">
+            
+                    
+                    jsfiddleとgitbook
             
                 </a>
             
@@ -232,13 +247,13 @@
 <p>npm&#x767B;&#x9332;&#x306F;</p>
 <pre><code>npm publish
 </code></pre><ul>
-<li><p>npm&#x306B;&#x767B;&#x9332;&#x3057;&#x3066;&#x3044;&#x308B;&#x5834;&#x5408;&#x306E;&#x4F7F;&#x3044;&#x65B9;<br><div class="markdown-tabs"><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-878" aria-controls="tab-878" role="tab" data-toggle="tab">book.json</a></li><li role="presentation" class=""><a href="#tab-879" aria-controls="tab-879" role="tab" data-toggle="tab">.gitpod.yml</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-878"><pre><code class="lang-json">    <span class="hljs-string">&quot;plugins&quot;</span>: [
+<li><p>npm&#x306B;&#x767B;&#x9332;&#x3057;&#x3066;&#x3044;&#x308B;&#x5834;&#x5408;&#x306E;&#x4F7F;&#x3044;&#x65B9;<br><div class="markdown-tabs"><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-888" aria-controls="tab-888" role="tab" data-toggle="tab">book.json</a></li><li role="presentation" class=""><a href="#tab-889" aria-controls="tab-889" role="tab" data-toggle="tab">.gitpod.yml</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-888"><pre><code class="lang-json">    <span class="hljs-string">&quot;plugins&quot;</span>: [
         <span class="hljs-string">&quot;my-plugin&quot;</span>]</code></pre>
-</div><div role="tabpanel" class="tab-pane " id="tab-879"><pre><code class="lang-yaml">gitbook install -g &lt;my-plugin<span class="hljs-string">&gt;</span></code></pre>
+</div><div role="tabpanel" class="tab-pane " id="tab-889"><pre><code class="lang-yaml">gitbook install -g &lt;my-plugin<span class="hljs-string">&gt;</span></code></pre>
 </div></div></div></p>
 </li>
 <li><p>npm&#x306B;&#x767B;&#x9332;&#x3057;&#x3066;&#x3044;&#x306A;&#x3044;&#x5834;&#x5408;&#x306E;&#x4F7F;&#x3044;&#x65B9;
-<div class="markdown-tabs"><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-709" aria-controls="tab-709" role="tab" data-toggle="tab">book.json</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-709"><pre><code class="lang-json">    <span class="hljs-string">&quot;plugins&quot;</span>: [
+<div class="markdown-tabs"><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-158" aria-controls="tab-158" role="tab" data-toggle="tab">book.json</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-158"><pre><code class="lang-json">    <span class="hljs-string">&quot;plugins&quot;</span>: [
         <span class="hljs-string">&quot;my-plugin@git+https://github.com/&lt;git_account&gt;/&lt;plugin_repository&gt;.git#master&quot;</span>]</code></pre>
 </div></div></div></p>
 </li>
@@ -248,7 +263,7 @@
 <h4 id="blocks"><a name="blocks" class="plugin-anchor" href="#blocks"><i class="fa fa-link" aria-hidden="true"></i></a>Blocks</h4>
 <p><code>{%...%}</code> &#x3067;&#x547C;&#x3073;&#x51FA;&#x3059;&#x30D6;&#x30ED;&#x30C3;&#x30AF;&#x306E;&#x6319;&#x52D5;&#x3092;&#x5B9A;&#x7FA9;&#x3067;&#x304D;&#x308B;&#x3002;&#x5F15;&#x6570;&#x3068;Body&#x3092;&#x4F7F;&#x3063;&#x3066;HTML&#x3092;&#x8FD4;&#x3059;   </p>
 <p><a href="https://github.com/marcopeg/gitbook-plugin-youtube-placeholder/blob/master/index.js" target="_blank">YouTube-Placeholder</a></p>
-<p><div class="markdown-tabs"><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-688" aria-controls="tab-688" role="tab" data-toggle="tab">index.js</a></li><li role="presentation" class=""><a href="#tab-689" aria-controls="tab-689" role="tab" data-toggle="tab">summary.md</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-688"><pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+<p><div class="markdown-tabs"><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-281" aria-controls="tab-281" role="tab" data-toggle="tab">index.js</a></li><li role="presentation" class=""><a href="#tab-282" aria-controls="tab-282" role="tab" data-toggle="tab">summary.md</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-281"><pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
     blocks: {
         youtube: (block) =&gt;
             <span class="hljs-string">`&lt;div style=&quot;position: relative;width: 100%;height: 0;padding-bottom: 56.25%;&quot;&gt;
@@ -261,9 +276,9 @@
             &lt;/div&gt;`</span>,
     },
 }</code></pre>
-</div><div role="tabpanel" class="tab-pane " id="tab-689"><pre><code class="lang-markdown">{% youtube embed=&quot;G9J-KcqcQYY&quot; %}{% endyoutube %}</code></pre>
+</div><div role="tabpanel" class="tab-pane " id="tab-282"><pre><code class="lang-markdown">{% youtube embed=&quot;G9J-KcqcQYY&quot; %}{% endyoutube %}</code></pre>
 </div></div></div></p>
-<p><a href="https://github.com/morizyun/gitbook-plugin-amazon-jp-link/blob/master/index.js" target="_blank">Amazon-jp-link</a><br><div class="markdown-tabs"><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-576" aria-controls="tab-576" role="tab" data-toggle="tab">index.js</a></li><li role="presentation" class=""><a href="#tab-577" aria-controls="tab-577" role="tab" data-toggle="tab">summary.md</a></li><li role="presentation" class=""><a href="#tab-578" aria-controls="tab-578" role="tab" data-toggle="tab">result.html</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-576"><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderAmazonJpLink</span>(<span class="hljs-params">asin, tag, body</span>) </span>{
+<p><a href="https://github.com/morizyun/gitbook-plugin-amazon-jp-link/blob/master/index.js" target="_blank">Amazon-jp-link</a><br><div class="markdown-tabs"><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-519" aria-controls="tab-519" role="tab" data-toggle="tab">index.js</a></li><li role="presentation" class=""><a href="#tab-520" aria-controls="tab-520" role="tab" data-toggle="tab">summary.md</a></li><li role="presentation" class=""><a href="#tab-521" aria-controls="tab-521" role="tab" data-toggle="tab">result.html</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-519"><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderAmazonJpLink</span>(<span class="hljs-params">asin, tag, body</span>) </span>{
   <span class="hljs-keyword">return</span> <span class="hljs-string">`&lt;a href=&quot;http://www.amazon.co.jp/gp/product/<span class="hljs-subst">${asin
             }</span>/ref=as_li_qf_sp_asin_il?ie=UTF8&amp;amp;camp=247&amp;amp;creative=1211&amp;amp;creativeASIN=<span class="hljs-subst">${
             asin}</span>&amp;amp;linkCode=as2&amp;amp;tag=<span class="hljs-subst">${tag}</span>&quot; target=&quot;_blank&quot;&gt;<span class="hljs-subst">${
@@ -296,15 +311,89 @@
     },
   },
 };</code></pre>
-</div><div role="tabpanel" class="tab-pane " id="tab-577"><pre><code class="lang-markdown">{% AmazonJpLink &quot;B01N59VNQY&quot;, &quot;johndue-22&quot; %}macOS Sierra{% endAmazonJpLink %}</code></pre>
-</div><div role="tabpanel" class="tab-pane " id="tab-578"><pre><code class="lang-markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;http://www.amazon.co.jp/gp/product/B01N59VNQY/ref=as_li_qf_sp_asin_il?ie=UTF8&amp;amp;camp=247&amp;amp;creative=1211&amp;amp;creativeASIN=B01N59VNQY&amp;amp;linkCode=as2&amp;amp;tag=johndue-22&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span>&gt;</span></span>
+</div><div role="tabpanel" class="tab-pane " id="tab-520"><pre><code class="lang-markdown">{% AmazonJpLink &quot;B01N59VNQY&quot;, &quot;johndue-22&quot; %}macOS Sierra{% endAmazonJpLink %}</code></pre>
+</div><div role="tabpanel" class="tab-pane " id="tab-521"><pre><code class="lang-markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;http://www.amazon.co.jp/gp/product/B01N59VNQY/ref=as_li_qf_sp_asin_il?ie=UTF8&amp;amp;camp=247&amp;amp;creative=1211&amp;amp;creativeASIN=B01N59VNQY&amp;amp;linkCode=as2&amp;amp;tag=johndue-22&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span>&gt;</span></span>
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">border</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://ws.assoc-amazon.jp/widgets/q?_encoding=UTF8&amp;amp;ASIN=B01N59VNQY&amp;amp;Format=_SL300_&amp;amp;ID=AsinImage&amp;amp;MarketPlace=JP&amp;amp;ServiceVersion=20070822&amp;amp;WS=1&amp;amp;tag=johndue-22&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;150&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;float: left; margin: 0 20px 20px 0;&quot;</span> /&gt;</span></span>
 <span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span>
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://www.assoc-amazon.jp/e/ir?t=johndue-22&amp;amp;l=as2&amp;amp;o=9&amp;amp;a=B01N59VNQY&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">border</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;border:none !important; margin:0px !important;&quot;</span>&gt;</span></span></code></pre>
 </div></div></div></p>
+<p><a href="https://github.com/cjam/gitbook-plugin-graph/blob/master/index.js" target="_blank">gitbook-plugin-graph</a></p>
+<p><div class="markdown-tabs"><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-495" aria-controls="tab-495" role="tab" data-toggle="tab">index.js</a></li><li role="presentation" class=""><a href="#tab-496" aria-controls="tab-496" role="tab" data-toggle="tab">_layouts/website/page.html</a></li><li role="presentation" class=""><a href="#tab-497" aria-controls="tab-497" role="tab" data-toggle="tab">summary.md</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-495"><pre><code class="lang-js"><span class="hljs-meta">&quot;use strict&quot;</span>;
+<span class="hljs-keyword">let</span> _uuidCounter = <span class="hljs-number">0</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">uuid</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">let</span> id = _uuidCounter++;
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;plugin-graph-&quot;</span>+id;
+};
+
+<span class="hljs-built_in">module</span>.exports = {
+    book: {
+        assets: <span class="hljs-string">&quot;./assets&quot;</span>,
+        js: [ ],
+        css: [ ]
+    },
+    blocks: {
+        graph: {
+            process: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">blk</span>) </span>{
+                <span class="hljs-keyword">let</span> id = uuid();
+                <span class="hljs-keyword">let</span> bodyString = blk.body.trim();
+                <span class="hljs-keyword">let</span> options = {};                 
+                <span class="hljs-keyword">try</span>{
+                    options = <span class="hljs-built_in">JSON</span>.parse(bodyString);                    
+                    options.target = <span class="hljs-string">`#<span class="hljs-subst">${id}</span>`</span>;
+
+                    <span class="hljs-keyword">let</span> scripts = <span class="hljs-string">`functionPlot(<span class="hljs-subst">${JSON.stringify(options)}</span>);`</span>
+
+                    <span class="hljs-keyword">let</span> html = <span class="hljs-string">`&lt;div&gt;
+                        &lt;span id=&quot;<span class="hljs-subst">${id}</span>&quot;&gt;&lt;/span&gt;
+                        &lt;script&gt;<span class="hljs-subst">${scripts}</span>&lt;/script&gt;
+                    &lt;/div&gt;`</span>;
+                    <span class="hljs-keyword">return</span> html;
+                }<span class="hljs-keyword">catch</span>(e){                    
+                    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;JSON Error: &lt;pre&gt;&quot;</span>+ e+<span class="hljs-string">&quot;&lt;/pre&gt;&quot;</span>;
+                }                             
+            }
+        }
+    }
+};</code></pre>
+</div><div role="tabpanel" class="tab-pane " id="tab-496"><pre><code class="lang-html">{% extends template.self %}
+
+{% block head %}
+    {{ super() }}
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{ &apos;gitbook-plugin-graph/d3.min.js&apos;|resolveAsset }}&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{ &apos;gitbook-plugin-graph/math.min.js&apos;|resolveAsset }}&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>    
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{{ &apos;gitbook-plugin-graph/function-plot.js&apos;|resolveAsset }}&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>    
+{% endblock %}</code></pre>
+</div><div role="tabpanel" class="tab-pane " id="tab-497"><pre><code class="lang-markdown">{% graph %}
+<span class="hljs-code">    {</span>
+<span class="hljs-code">        &quot;title&quot;:&quot;&#x57FA;&#x790E;&#x7684;&#x306A;&#x95A2;&#x6570;&#x3068;&#x30AC;&#x30F3;&#x30DE;&#x95A2;&#x6570;&#x306E;&#x63CF;&#x753B;&#x30C6;&#x30B9;&#x30C8;&quot;,     </span>
+<span class="hljs-code">        &quot;grid&quot;:true,</span>
+<span class="hljs-code">        &quot;xAxis&quot;: {</span>
+<span class="hljs-code">            &quot;label&quot;:&quot;X&#x8EF8;&quot;,</span>
+<span class="hljs-code">            &quot;domain&quot;: [-10,10]</span>
+<span class="hljs-code">        },</span>
+<span class="hljs-code">        &quot;yAxis&quot;: {</span>
+<span class="hljs-code">            &quot;label&quot;:&quot;Y&#x8EF8;&quot;,</span>
+<span class="hljs-code">            &quot;domain&quot;: [-6,6]</span>
+<span class="hljs-code">        },</span>
+<span class="hljs-code">        &quot;data&quot;: [</span>
+<span class="hljs-code">              { &quot;fn&quot;: &quot;sin(x)&quot;},</span>
+<span class="hljs-code">              { &quot;fn&quot;: &quot;x&quot;},</span>
+<span class="hljs-code">              { &quot;fn&quot;: &quot;x - x^3/3!&quot;,</span>
+<span class="hljs-code">                &quot;sampler&quot;: &quot;builtIn&quot;,</span>
+<span class="hljs-code">                &quot;graphType&quot;: &quot;polyline&quot;},</span>
+<span class="hljs-code">              { &quot;fn&quot;: &quot;x - x^3/3! + x^5/5!&quot;, </span>
+<span class="hljs-code">                &quot;sampler&quot;: &quot;builtIn&quot;,</span>
+<span class="hljs-code">                &quot;graphType&quot;: &quot;polyline&quot;},</span>
+<span class="hljs-code">              { &quot;fn&quot;: &quot;gamma(x)&quot;, </span>
+<span class="hljs-code">                &quot;sampler&quot;: &quot;builtIn&quot;,</span>
+<span class="hljs-code">                &quot;graphType&quot;: &quot;polyline&quot;}</span>
+<span class="hljs-code">          ]</span>
+<span class="hljs-code">    }</span>
+{% endgraph %}</code></pre>
+</div></div></div></p>
 <h4 id="filters"><a name="filters" class="plugin-anchor" href="#filters"><i class="fa fa-link" aria-hidden="true"></i></a>Filters</h4>
 <p>pipe&#x30AA;&#x30DA;&#x30EC;&#x30FC;&#x30BF;&#x30FC;&#x3092;&#x7E4B;&#x3044;&#x3067;&#x5909;&#x6570;&#x3092;&#x95A2;&#x6570;&#x306B;&#x6D41;&#x3057;&#x3066;&#x3044;&#x304D;&#x3001;&#x5B8C;&#x6210;&#x3057;&#x305F;HTML&#x3092;&#x8FD4;&#x3059;<br><a href="https://github.com/1cgonza/gitbook-plugin-noembed/blob/master/index.js" target="_blank">Noembeded</a>
-<div class="markdown-tabs"><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-808" aria-controls="tab-808" role="tab" data-toggle="tab">index.js</a></li><li role="presentation" class=""><a href="#tab-809" aria-controls="tab-809" role="tab" data-toggle="tab">assets/scripts.js</a></li><li role="presentation" class=""><a href="#tab-810" aria-controls="tab-810" role="tab" data-toggle="tab">summary.md</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-808"><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">noembed</span>(<span class="hljs-params">url</span>) </span>{
+<div class="markdown-tabs"><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-762" aria-controls="tab-762" role="tab" data-toggle="tab">index.js</a></li><li role="presentation" class=""><a href="#tab-763" aria-controls="tab-763" role="tab" data-toggle="tab">assets/scripts.js</a></li><li role="presentation" class=""><a href="#tab-764" aria-controls="tab-764" role="tab" data-toggle="tab">summary.md</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-762"><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">noembed</span>(<span class="hljs-params">url</span>) </span>{
   <span class="hljs-keyword">var</span> endpoint = <span class="hljs-string">&apos;//noembed.com/embed?&apos;</span>;
 
   <span class="hljs-keyword">if</span> (!!url.length) {
@@ -326,7 +415,7 @@
     video: noembed,
   }
 };</code></pre>
-</div><div role="tabpanel" class="tab-pane " id="tab-809"><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderNoembed</span>(<span class="hljs-params">event</span>) </span>{
+</div><div role="tabpanel" class="tab-pane " id="tab-763"><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderNoembed</span>(<span class="hljs-params">event</span>) </span>{
   <span class="hljs-keyword">var</span> iframes         = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&apos;.noembed-wrapper&apos;</span>);
   <span class="hljs-keyword">var</span> loaded          = <span class="hljs-number">0</span>;
   <span class="hljs-keyword">var</span> total           = iframes.length;
@@ -419,7 +508,7 @@
 <span class="hljs-built_in">require</span>([<span class="hljs-string">&apos;gitbook&apos;</span>], <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">gitbook</span>) </span>{
   gitbook.events.on(<span class="hljs-string">&apos;page.change&apos;</span>, renderNoembed);
 });</code></pre>
-</div><div role="tabpanel" class="tab-pane " id="tab-810"><pre><code class="lang-markdown">{{ &apos;https://www.slideshare.net/kanbara/abc2018springflutter-101476556&apos; | noembed }}</code></pre>
+</div><div role="tabpanel" class="tab-pane " id="tab-764"><pre><code class="lang-markdown">{{ &apos;https://www.slideshare.net/kanbara/abc2018springflutter-101476556&apos; | noembed }}</code></pre>
 </div></div></div><br><a href="https://github.com/eritsi/gitbook-plugin-slideshare/blob/master/index.js" target="_blank">&#x81EA;&#x4F5C;slideshare&#x30DA;&#x30FC;&#x30B8;&#x6307;&#x5B9A;</a>  </p>
 <ul>
 <li>&#x958B;&#x767A;&#x306E;&#x6D41;&#x308C;  <ol>
@@ -432,7 +521,7 @@
 </ol>
 </li>
 </ul>
-<p><div class="markdown-tabs"><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-271" aria-controls="tab-271" role="tab" data-toggle="tab">index.js</a></li><li role="presentation" class=""><a href="#tab-272" aria-controls="tab-272" role="tab" data-toggle="tab">assets/scripts.js</a></li><li role="presentation" class=""><a href="#tab-273" aria-controls="tab-273" role="tab" data-toggle="tab">summary.md</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-271"><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">slideshare</span>(<span class="hljs-params">url, kwargs</span>) </span>{
+<p><div class="markdown-tabs"><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-267" aria-controls="tab-267" role="tab" data-toggle="tab">index.js</a></li><li role="presentation" class=""><a href="#tab-268" aria-controls="tab-268" role="tab" data-toggle="tab">assets/scripts.js</a></li><li role="presentation" class=""><a href="#tab-269" aria-controls="tab-269" role="tab" data-toggle="tab">summary.md</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-267"><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">slideshare</span>(<span class="hljs-params">url, kwargs</span>) </span>{
   <span class="hljs-keyword">var</span> endpoint = <span class="hljs-string">&apos;//noembed.com/embed?&apos;</span>;
   <span class="hljs-keyword">var</span> page = kwargs.page
 
@@ -454,7 +543,7 @@
     slideshare: slideshare,
   }
 };</code></pre>
-</div><div role="tabpanel" class="tab-pane " id="tab-272"><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderSlideshare</span>(<span class="hljs-params">event</span>) </span>{
+</div><div role="tabpanel" class="tab-pane " id="tab-268"><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderSlideshare</span>(<span class="hljs-params">event</span>) </span>{
   <span class="hljs-keyword">var</span> iframes         = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&apos;.slideshare-wrapper&apos;</span>);
   <span class="hljs-keyword">var</span> loaded          = <span class="hljs-number">0</span>;
   <span class="hljs-keyword">var</span> total           = iframes.length;
@@ -520,7 +609,7 @@
 <span class="hljs-built_in">require</span>([<span class="hljs-string">&apos;gitbook&apos;</span>], <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">gitbook</span>) </span>{
   gitbook.events.on(<span class="hljs-string">&apos;page.change&apos;</span>, renderSlideshare);
 });</code></pre>
-</div><div role="tabpanel" class="tab-pane " id="tab-273"><pre><code class="lang-markdown">{{ &apos;https://www.slideshare.net/kanbara/abc2018springflutter-101476556&apos; | slideshare(page=&apos;5&apos;) }}</code></pre>
+</div><div role="tabpanel" class="tab-pane " id="tab-269"><pre><code class="lang-markdown">{{ &apos;https://www.slideshare.net/kanbara/abc2018springflutter-101476556&apos; | slideshare(page=&apos;5&apos;) }}</code></pre>
 </div></div></div>  </p>
 <h3 id="githubio&#x3067;&#x306E;&#x516C;&#x958B;&#x307E;&#x3067;"><a name="githubio&#x3067;&#x306E;&#x516C;&#x958B;&#x307E;&#x3067;" class="plugin-anchor" href="#githubio&#x3067;&#x306E;&#x516C;&#x958B;&#x307E;&#x3067;"><i class="fa fa-link" aria-hidden="true"></i></a>github.io&#x3067;&#x306E;&#x516C;&#x958B;&#x307E;&#x3067;</h3>
 <p><a href="https://r-ngtm.hatenablog.com/entry/2020/06/18/193235" target="_blank">&#x53C2;&#x8003;&#x30B5;&#x30A4;&#x30C8;</a></p>
@@ -567,10 +656,14 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Introduction">
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="jsfiddle2gitbook.html" class="navigation navigation-next " aria-label="Next page: jsfiddleとgitbook">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -579,7 +672,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"gitbook-pluginの開発","level":"1.1.1","depth":2,"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[{"title":"gitbook-pluginの開発","level":"1.1.1","depth":2,"path":"gitbook/plugin.md","ref":"gitbook/plugin.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["hints","advanced-emoji","tabs2","url-embed","-sharing","code","hide-published-with","anchors","codeblock-label","search-pro-kui","youtube-placeholder","graph","katex","amazon-jp-link","mind-maps","noembed","collapsible-chapters","slideshare@git+https://github.com/eritsi/gitbook-plugin-slideshare.git#master"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"codeblock-label":{},"search":{},"collapsible-chapters":{},"youtube-placeholder":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"slideshare":{},"graph":{},"hide-published-with":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"mind-maps":{},"tabs2":{},"highlight":{},"amazon-jp-link":{},"noembed":{},"search-pro-kui":{},"url-embed":{},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GitBook Tutorial","gitbook":"*","description":"This is a gitbook example"},"file":{"path":"gitbook/plugin.md","mtime":"2022-02-12T07:36:26.471Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-12T07:36:58.893Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"gitbook-pluginの開発","level":"1.1.1","depth":2,"next":{"title":"jsfiddleとgitbook","level":"1.1.2","depth":2,"path":"gitbook/jsfiddle2gitbook.md","ref":"gitbook/jsfiddle2gitbook.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[{"title":"gitbook-pluginの開発","level":"1.1.1","depth":2,"path":"gitbook/plugin.md","ref":"gitbook/plugin.md","articles":[]},{"title":"jsfiddleとgitbook","level":"1.1.2","depth":2,"path":"gitbook/jsfiddle2gitbook.md","ref":"gitbook/jsfiddle2gitbook.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["hints","advanced-emoji","tabs2","url-embed","-sharing","code","hide-published-with","anchors","codeblock-label","search-pro-kui","youtube-placeholder","graph","katex","amazon-jp-link","mind-maps","noembed","collapsible-chapters","slideshare@git+https://github.com/eritsi/gitbook-plugin-slideshare.git#master"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"codeblock-label":{},"search":{},"collapsible-chapters":{},"youtube-placeholder":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"slideshare":{},"graph":{},"hide-published-with":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"mind-maps":{},"tabs2":{},"highlight":{},"amazon-jp-link":{},"noembed":{},"search-pro-kui":{},"url-embed":{},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GitBook Tutorial","gitbook":"*","description":"This is a gitbook example"},"file":{"path":"gitbook/plugin.md","mtime":"2022-02-13T02:43:01.733Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-13T02:45:35.246Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

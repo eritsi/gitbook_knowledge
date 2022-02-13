@@ -1,0 +1,416 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>jsfiddleとgitbook · GitBook Tutorial</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-tabs2/tabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-codeblock-label/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-search-pro-kui/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-mind-maps/mindmaps.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-noembed/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-collapsible-chapters/collapsible-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-slideshare/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="plugin.html" />
+    
+
+    <script src="gitbook-plugin-graph/d3.min.js"></script>
+<script src="gitbook-plugin-graph/math.min.js"></script>
+    <script src="gitbook-plugin-graph/function-plot.js"></script>    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="plugin.html">
+            
+                <a href="plugin.html">
+            
+                    
+                    gitbook-pluginの開発
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.2" data-path="jsfiddle2gitbook.html">
+            
+                <a href="jsfiddle2gitbook.html">
+            
+                    
+                    jsfiddleとgitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >jsfiddleとgitbook</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="jsfiddle-&#x3092;&#x4F7F;&#x3063;&#x305F;-gitbook-&#x306E;&#x958B;&#x767A;&#x30FB;&#x4F5C;&#x6210;"><a name="jsfiddle-&#x3092;&#x4F7F;&#x3063;&#x305F;-gitbook-&#x306E;&#x958B;&#x767A;&#x30FB;&#x4F5C;&#x6210;" class="plugin-anchor" href="#jsfiddle-&#x3092;&#x4F7F;&#x3063;&#x305F;-gitbook-&#x306E;&#x958B;&#x767A;&#x30FB;&#x4F5C;&#x6210;"><i class="fa fa-link" aria-hidden="true"></i></a>jsfiddle &#x3092;&#x4F7F;&#x3063;&#x305F; gitbook &#x306E;&#x958B;&#x767A;&#x30FB;&#x4F5C;&#x6210;</h2>
+<h3 id="jsfiddle&#x306E;&#x57FA;&#x790E;"><a name="jsfiddle&#x306E;&#x57FA;&#x790E;" class="plugin-anchor" href="#jsfiddle&#x306E;&#x57FA;&#x790E;"><i class="fa fa-link" aria-hidden="true"></i></a>jsfiddle&#x306E;&#x57FA;&#x790E;</h3>
+<ul>
+<li><a href="https://digitalidentity.co.jp/blog/creative/how-to-jsfiddle.html" target="_blank">&#x53C2;&#x8003;&#x30B5;&#x30A4;&#x30C8;</a>  </li>
+</ul>
+<h3 id="function-plot&#x306E;&#x57FA;&#x790E;"><a name="function-plot&#x306E;&#x57FA;&#x790E;" class="plugin-anchor" href="#function-plot&#x306E;&#x57FA;&#x790E;"><i class="fa fa-link" aria-hidden="true"></i></a>function-plot&#x306E;&#x57FA;&#x790E;</h3>
+<ul>
+<li><a href="https://mauriciopoppe.github.io/function-plot/" target="_blank">&#x672C;&#x5BB6;&#x30B5;&#x30A4;&#x30C8;</a>  </li>
+</ul>
+<p><code>function-plot</code> uses interval-arithmetic math by default, unfortunately some functions are not implemented yet because of the underlying complexity, for this reason you can always evaluate a function with , to do so make sure that you include <code>math.js</code> before <code>function-plot</code>  </p>
+<pre><code>&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/mathjs/1.5.2/math.min.js&quot;&gt;&lt;/script&gt;
+</code></pre><p>And then set the following:<br><code>sampler: &apos;builtIn&apos;</code> the parser bundled with function-plot will be replaced with the one in math.js
+<code>graphType: &apos;polyline&apos;</code> or <code>graphType: &apos;scatter&apos;</code>  </p>
+<pre><code>functionPlot({
+  target: &apos;#sampler-mathjs&apos;,
+  disableZoom: true,
+  data: [{
+    fn: &apos;gamma(x)&apos;,
+    sampler: &apos;builtIn&apos;,
+    graphType: &apos;polyline&apos;
+  }]
+})
+functionPlot({
+  target: &apos;#sampler-tan-mathjs&apos;,
+  data: [{
+    fn: &apos;tan(x)&apos;,
+    nSamples: 4000,
+    sampler: &apos;builtIn&apos;,
+    graphType: &apos;polyline&apos;
+  }]
+})
+</code></pre><h3 id="jsfiddle&#x3067;&#x30AC;&#x30F3;&#x30DE;&#x95A2;&#x6570;&#x306E;&#x8868;&#x793A;&#x65B9;&#x6CD5;&#x3092;&#x958B;&#x767A;&#x3059;&#x308B;"><a name="jsfiddle&#x3067;&#x30AC;&#x30F3;&#x30DE;&#x95A2;&#x6570;&#x306E;&#x8868;&#x793A;&#x65B9;&#x6CD5;&#x3092;&#x958B;&#x767A;&#x3059;&#x308B;" class="plugin-anchor" href="#jsfiddle&#x3067;&#x30AC;&#x30F3;&#x30DE;&#x95A2;&#x6570;&#x306E;&#x8868;&#x793A;&#x65B9;&#x6CD5;&#x3092;&#x958B;&#x767A;&#x3059;&#x308B;"><i class="fa fa-link" aria-hidden="true"></i></a>jsfiddle&#x3067;&#x30AC;&#x30F3;&#x30DE;&#x95A2;&#x6570;&#x306E;&#x8868;&#x793A;&#x65B9;&#x6CD5;&#x3092;&#x958B;&#x767A;&#x3059;&#x308B;</h3>
+<p>&#x4E0A;&#x8A18;&#x3092;&#x8E0F;&#x307E;&#x3048;&#x3001;jsfiddle&#x306B;&#x79FB;&#x690D;&#x3059;&#x308B;&#x3002;<br>&#x3053;&#x306E;&#x6642;&#x3001;jsfiddle&#x306E;&#x5DE6;&#x30AB;&#x30E9;&#x30E0;&#x306E;Ressources&#x306B; <code>math.min.js</code> &#x3068;<code>function-plot</code> &#x304C;&#x3053;&#x306E;&#x9806;&#x756A;&#x306B;&#x8AAD;&#x307F;&#x8FBC;&#x307E;&#x308C;&#x3066;&#x3044;&#x308B;&#x3053;&#x3068;&#x304C;&#x5FC5;&#x9808;&#x3068;&#x306A;&#x308B;&#x3002;<br><a href="https://cdnjs.cloudflare.com/ajax/libs/mathjs/1.5.2/math.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/mathjs/1.5.2/math.min.js</a><br><a href="https://cdnjs.cloudflare.com/ajax/libs/function-plot/1.22.7/function-plot.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/function-plot/1.22.7/function-plot.js</a>  </p>
+<script async src="//jsfiddle.net/kfj5rxLb/1/embed/js,html,css,result/dark/"></script>
+
+<h3 id="&#x6BD4;&#x8F03;&#xFF1A;-ressources&#x7121;&#x3057;&#x3067;&#x306E;&#x30B0;&#x30E9;&#x30D5;&#x63CF;&#x753B;"><a name="&#x6BD4;&#x8F03;&#xFF1A;-ressources&#x7121;&#x3057;&#x3067;&#x306E;&#x30B0;&#x30E9;&#x30D5;&#x63CF;&#x753B;" class="plugin-anchor" href="#&#x6BD4;&#x8F03;&#xFF1A;-ressources&#x7121;&#x3057;&#x3067;&#x306E;&#x30B0;&#x30E9;&#x30D5;&#x63CF;&#x753B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6BD4;&#x8F03;&#xFF1A; Ressources&#x7121;&#x3057;&#x3067;&#x306E;&#x30B0;&#x30E9;&#x30D5;&#x63CF;&#x753B;</h3>
+<p>javascript&#x3060;&#x3051;&#x3067;&#x3082;&#x3042;&#x308B;&#x7A0B;&#x5EA6;&#x306E;&#x30B0;&#x30E9;&#x30D5;&#x63CF;&#x753B;&#x306F;&#x53EF;&#x80FD;&#x3002;&#x4F8B;&#x3068;&#x3057;&#x3066;&#x4EE5;&#x4E0B;&#x306E;&#x4E8C;&#x6B21;&#x95A2;&#x6570;&#x306A;&#x3069;&#x306F;&#x666E;&#x901A;&#x306B;&#x63CF;&#x753B;&#x3067;&#x304D;&#x308B;&#x3002;  </p>
+<script async src="//jsfiddle.net/oukzwr56/embed/js,html,css,result/dark/"></script>
+
+<h3 id="gitbook&#x3078;&#x79FB;&#x690D;&#x3059;&#x308B;"><a name="gitbook&#x3078;&#x79FB;&#x690D;&#x3059;&#x308B;" class="plugin-anchor" href="#gitbook&#x3078;&#x79FB;&#x690D;&#x3059;&#x308B;"><i class="fa fa-link" aria-hidden="true"></i></a>gitbook&#x3078;&#x79FB;&#x690D;&#x3059;&#x308B;</h3>
+<ol>
+<li>&#x65B9;&#x91DD;<br><a href="https://www.npmjs.com/package/gitbook-plugin-graph" target="_blank">NPM&#x4E0A;&#x306E;&#x516C;&#x5F0F;</a>&#x306B;&#x3088;&#x308B;&#x3068;&#x305D;&#x3082;&#x305D;&#x3082; <code>gitbook-plugin-graph</code> &#x306F; <code>function-plot</code> &#x306E;warpper&#x3067;&#x3042;&#x308B;&#x305D;&#x3046;&#x3067;&#x3001;&#x305D;&#x3053;&#x306B;<code>math.min.js</code>&#x306E;&#x8AAD;&#x307F;&#x8FBC;&#x307F;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3001;&#x4F8B;&#x984C;&#x30CE;&#x30FC;&#x30C8;&#x30D6;&#x30C3;&#x30AF;&#x306E;&#x3088;&#x3046;&#x306B; <code>gamma(x)</code> &#x3092;&#x547C;&#x3073;&#x51FA;&#x305B;&#x3070;&#x3088;&#x3044;&#x306F;&#x305A;&#x3002;  </li>
+<li>&#x89B3;&#x5BDF;<br><a href="https://github.com/cjam/gitbook-plugin-graph" target="_blank">gitbook-plugin-graph&#x306E;Github</a>&#x3092;&#x898B;&#x308B;&#x3068;&#x3001;<code>_layouts/website/page.html</code> &#x306B;&#x3066;<code>function-plot.js</code>&#x3092;&#x8AAD;&#x307F;&#x8FBC;&#x3093;&#x3067;&#x3044;&#x308B;&#x306E;&#x3067;&#x3001;&#x305D;&#x306E;&#x76F4;&#x524D;&#x306B; <code>math.min.js</code>&#x3082;&#x8AAD;&#x307F;&#x8FBC;&#x3081;&#x3070;&#x826F;&#x3044;&#x3068;&#x308F;&#x304B;&#x308B;&#x3002;</li>
+<li>&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x30D7;&#x30ED;&#x30BB;&#x30B9;&#x306B;&#x624B;&#x3092;&#x52A0;&#x3048;&#x308B;<br><code>.gitpod.yml</code>&#x306B;&#x3066;<code>math.min.js</code>&#x3092;wget&#x3057;&#x3001;<code>gitbook-plugin-graph</code>&#x5185;&#x306E;&#x9069;&#x5207;&#x306A;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x306B;&#x8A2D;&#x5B9A;&#x3055;&#x308C;&#x305F;<code>math.min.js</code>&#x3092;page.html&#x306B;&#x3066;&#x547C;&#x3073;&#x51FA;&#x3059;&#x3088;&#x3046;&#x6539;&#x5909;&#x3057;&#x305F;&#x3002;  </li>
+<li>&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x5408;&#x308F;&#x305B;<br>&#x306A;&#x304A;&#x3001;gitbook&#x3067;&#x4F7F;&#x7528;&#x3057;&#x3066;&#x3044;&#x308B;javascript&#x306E;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x306F;v8.8&#x3067;&#x3042;&#x308A;&#x3001;&#x305D;&#x3053;&#x3068;&#x565B;&#x307F;&#x5408;&#x3046;<code>math.min.js</code>&#x306E;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x306F;v6.6.5&#x3060;&#x3063;&#x305F;&#x3002;jsfiddle&#x4E0A;&#x3067;&#x306F;&#x305D;&#x308C;&#x305E;&#x308C;&#x306E;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x3092;&#x5909;&#x66F4;&#x3057;&#x3084;&#x3059;&#x304F;&#x3001;&#x565B;&#x307F;&#x5408;&#x308F;&#x305B;&#x52D5;&#x4F5C;&#x78BA;&#x8A8D;&#x3082;&#x5B9F;&#x65BD;&#x3057;&#x3084;&#x3059;&#x304B;&#x3063;&#x305F;&#x3002;  </li>
+</ol>
+<p>&#x203B; <a href="https://github.com/mauriciopoppe/function-plot#instance--functionplotoptions" target="_blank">function-plot&#x306E;github</a>&#x306B;&#x3066;<a href="https://github.com/mauriciopoppe/function-plot#instance--functionplotoptions" target="_blank">&#x4F8B;&#x984C;&#x3068;&#x3057;&#x3066;&#x306E;&#x30CE;&#x30FC;&#x30C8;&#x30D6;&#x30C3;&#x30AF;</a>&#x304C;&#x63D0;&#x4F9B;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x3002;  </p>
+<h3 id="&#x88DC;&#x8DB3;&#x30AC;&#x30F3;&#x30DE;&#x95A2;&#x6570;&#x306E;&#x6570;&#x5024;&#x7684;&#x5B9F;&#x88C5;"><a name="&#x88DC;&#x8DB3;&#x30AC;&#x30F3;&#x30DE;&#x95A2;&#x6570;&#x306E;&#x6570;&#x5024;&#x7684;&#x5B9F;&#x88C5;" class="plugin-anchor" href="#&#x88DC;&#x8DB3;&#x30AC;&#x30F3;&#x30DE;&#x95A2;&#x6570;&#x306E;&#x6570;&#x5024;&#x7684;&#x5B9F;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x88DC;&#x8DB3;:&#x30AC;&#x30F3;&#x30DE;&#x95A2;&#x6570;&#x306E;&#x6570;&#x5024;&#x7684;&#x5B9F;&#x88C5;</h3>
+<p>&#x3053;&#x3061;&#x3089;&#x306E;jsfiddle&#x3092;&#x53C2;&#x8003;&#x306B;&#x3001;&#x3057;&#x307F;&#x3058;&#x307F;&#x3059;&#x308B;&#x3002;jsfiddle&#x4E0A;&#x3067;&#x5C06;&#x68CB;&#x30A2;&#x30D7;&#x30EA;&#x304C;&#x5404;&#x7A2E;&#x5B9F;&#x88C5;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x3002;&#x3002;</p>
+<script async src="//jsfiddle.net/mizarjp/j9k6143v/119/embed/"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="plugin.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: gitbook-pluginの開発">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"jsfiddleとgitbook","level":"1.1.2","depth":2,"previous":{"title":"gitbook-pluginの開発","level":"1.1.1","depth":2,"path":"gitbook/plugin.md","ref":"gitbook/plugin.md","articles":[]},"dir":"ltr"},"config":{"plugins":["hints","advanced-emoji","tabs2","url-embed","-sharing","code","hide-published-with","anchors","codeblock-label","search-pro-kui","youtube-placeholder","graph","katex","amazon-jp-link","mind-maps","noembed","collapsible-chapters","slideshare@git+https://github.com/eritsi/gitbook-plugin-slideshare.git#master"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"codeblock-label":{},"search":{},"collapsible-chapters":{},"youtube-placeholder":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"slideshare":{},"graph":{},"hide-published-with":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"mind-maps":{},"tabs2":{},"highlight":{},"amazon-jp-link":{},"noembed":{},"search-pro-kui":{},"url-embed":{},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GitBook Tutorial","gitbook":"*","description":"This is a gitbook example"},"file":{"path":"gitbook/jsfiddle2gitbook.md","mtime":"2022-02-13T02:44:01.677Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-13T02:45:35.246Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook.js"></script>
+    <script src="theme.js"></script>
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-tabs2/tabs.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-hide-published-with/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-search-pro-kui/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-search-pro-kui/search.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-mind-maps/mindmaps.dist.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-noembed/scripts.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-collapsible-chapters/collapsible-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-slideshare/scripts.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

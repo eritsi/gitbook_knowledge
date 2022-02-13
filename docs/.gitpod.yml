@@ -1,4 +1,20 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
+github:
+  prebuilds:
+    # enable for the master/default branch (defaults to true)
+    master: true
+    # enable for all branches in this repo (defaults to false)
+    branches: true
+    # enable for pull requests coming from this repo (defaults to true)
+    pullRequests: true
+    # enable for pull requests coming from forks (defaults to false)
+    pullRequestsFromForks: true
+    # add a "Review in Gitpod" button as a comment to pull requests (defaults to true)
+    addComment: true
+    # add a "Review in Gitpod" button to pull requests (defaults to false)
+    addBadge: false
+    # add a label once the prebuild is ready to pull requests (defaults to false)
+    addLabel: prebuilt-in-gitpod
 tasks:
   - name: Install gitbook
     init: | 
@@ -19,6 +35,7 @@ tasks:
       wget -P ./node_modules/gitbook-plugin-graph/assets https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.6.5/math.min.js
       sed -i -e "6i <script src=\"{{ 'gitbook-plugin-graph/math.min.js'|resolveAsset }}\"></script>" ./node_modules/gitbook-plugin-graph/_layouts/website/page.html
       gitbook serve
+      # gitbook build . docs
     command: |
       echo 'Ready to start' 
       # tar cvfz pj.tar.gz SUMMARY.md ch1/* ch2/* ch3/* ch4/*
